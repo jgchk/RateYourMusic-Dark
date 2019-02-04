@@ -1,0 +1,6739 @@
+/* ==UserStyle==
+@name           RateYourMusic Dark
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         mocha
+==/UserStyle== */
+:root {
+    --background: #222427;
+    --foreground: #27292d;
+    --border: #373b41;
+    --link: #81a2be;
+    --hover: #c66;
+    --text: #c5c8c6;
+    --dark-text: #969896;
+    --white: #fff;
+    --button: #4271ae;
+    --button-hover: #3e999f;
+    --button-text: #edeeed;
+}
+
+@-moz-document domain("rateyourmusic.com") {
+    #navtop li,
+    #navtop li.sub {
+        border: none;
+    }
+    .reveal-modal {
+        background: var(--foreground);
+    }
+    .reveal-modal .close-reveal-modal {
+        color: var(--text);
+    }
+    body {
+        background-color: var(--background);
+    }
+    #content {
+        color: var(--text);
+        background: var(--background);
+    }
+    .number {
+        color: var(--dark-text);
+    }
+    .trodd,
+    .treven {
+        color: var(--text);
+        background: var(--foreground);
+        border: 1px solid var(--border);
+    }
+    .rel_date {
+        color: var(--dark-text);
+    }
+    .generic_title {
+        color: var(--text);
+    }
+    .generic_desc {
+        color: var(--text);
+    }
+    a.list_artist:link,
+    a.list_artist:visited,
+    a.list_user:link,
+    a.list_user:visited,
+    list_artist,
+    list_user {
+        color: var(--link);
+    }
+    a.list_artist:hover,
+    a.list_user:hover,
+    list_artist:hover,
+    list_user:hover {
+        color: var(--hover);
+    }
+    a.list_album:link,
+    a.list_album:visited,
+    list_album {
+        color: var(--link);
+    }
+    a.list_album:hover,
+    list_album:hover {
+        color: var(--hover);
+    }
+    div.bubble_header {
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-bottom: none;
+        background: var(--foreground);
+    }
+    div.bubble_content {
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-top: none;
+        background: var(--foreground);
+    }
+    #navtop {
+        color: var(--text);
+        border: none;
+    }
+    #navtop li {
+        background: none;
+    }
+    .submenu_ext {
+        color: var(--text);
+        background: var(--background);
+    }
+    #navtop a,
+    #navtop a.sub {
+        color: var(--text);
+    }
+    #navtop a:hover,
+    #navtop a:link#current,
+    #navtop a:visited#current,
+    #navtop a.sub:hover,
+    #navtop a.sub:link#current,
+    #navtop a.sub:visited#current {
+        color: var(--white);
+        background: none;
+    }
+    #navtop a.feature_link {
+        color: var(--link);
+    }
+    #navtop a.feature_link:hover {
+        color: var(--hover);
+    }
+    #navbottom {
+        background: var(--background);
+        border: none;
+    }
+    #navbottom li a {
+        color: var(--link) !important;
+    }
+    #navbottom li a:hover {
+        color: var(--hover) !important;
+    }
+    a:link,
+    a:visited {
+        color: var(--link);
+    }
+    a:active,
+    a:hover {
+        color: var(--hover);
+    }
+    a.artist {
+        color: var(--link);
+    }
+    a.artist:hover {
+        color: var(--hover);
+    }
+    a.film_artist {
+        color: var(--link);
+    }
+    a.film_artist:hover {
+        color: var(--hover);
+    }
+    a.film {
+        color: var(--link);
+    }
+    a.film:hover {
+        color: var(--hover);
+    }
+    a.album {
+        color: var(--link);
+    }
+    a.album:hover {
+        color: var(--hover);
+    }
+    a.genre {
+        color: var(--link);
+    }
+    a.genre:hover {
+        color: var(--hover);
+    }
+    .modlink a:visited {
+        color: var(--link);
+    }
+    address {
+        color: var(--text);
+    }
+    #breadcrumb {
+        border: 1px solid var(--border);
+        border-radius: 0;
+        background: var(--foreground);
+    }
+    #breadcrumb li {
+        background: none;
+    }
+    #breadcrumb li.current {
+        color: var(--text);
+    }
+    #breadcrumb li.lnk:hover {
+        background: none;
+    }
+    #breadcrumb a {
+        color: var(--text);
+    }
+    #breadcrumb a:hover {
+        color: var(--white);
+    }
+    #profilename {
+        color: var(--text);
+    }
+    .mbtime {
+        color: var(--dark-text);
+    }
+    .ch_subject_i {
+        background-image: none;
+    }
+    .ch_subject_o {
+        background-image: none;
+    }
+    .ch_body,
+    .ch_date {
+        color: var(--text);
+    }
+    .ch_selected {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+    }
+    .ch_date {
+        color: var(--dark-text);
+    }
+    .ch_body {
+        color: var(--text);
+    }
+    .spoiler {
+        border: 1px solid #FBB;
+        color: maroon;
+        background-color: #FDD;
+    }
+    .error,
+    .error2 {
+        background-color: #FCC;
+        border: 1px solid #F99;
+    }
+    .error {
+        color: maroon;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .error span,
+    .error2 span {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .error span {
+        color: red;
+        font-size: x-large;
+    }
+    .error #errhead {
+        margin: 0;
+        font-size: larger;
+    }
+    .error p {
+        margin: 0;
+        line-height: 1.4em;
+    }
+    .error2 {
+        color: maroon;
+        margin-bottom: 10px;
+    }
+    .error2 span {
+        color: red;
+        font-size: x-large;
+    }
+    .error2 p {
+        margin: 0;
+        font-size: larger;
+        line-height: 1.4em;
+    }
+    .note {
+        background-color: #ffe;
+        border: 1px solid #dbdbaa;
+        padding: 6px;
+    }
+    .warning {
+        background-color: #FFE;
+        border: 1px solid #FFC;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .notice,
+    a.spellbutton {
+        border: 1px solid #bbb;
+    }
+    .warning p {
+        margin: 0;
+        line-height: 1.4em;
+    }
+    .notice {
+        background-color: #f8f8f8;
+        padding: 5px;
+        color: #888;
+        font-size: x-small;
+        margin-bottom: 10px;
+    }
+    .pmquote,
+    .pmwarning {
+        color: var(--dark-text);
+    }
+    .pmwarning {
+        background-color: var(--foreground);
+        border: none;
+    }
+    #membersOnline td,
+    #membersOnline th,
+    #newestUsers,
+    #newestUsers td,
+    #newestUsers th,
+    .controlbar,
+    .discography,
+    .tblstandard {
+        border: 1px solid var(--border);
+    }
+    .loginprompt {
+        background: #ffd;
+        font-size: 1.1em;
+    }
+    .shaded {
+        background-color: #eee;
+    }
+    .oldrec {
+        background-color: #cecece;
+    }
+    .favorite {
+        background-color: #e0efe0;
+    }
+    .helptext {
+        color: maroon;
+    }
+    .admin {
+        color: #ee9;
+    }
+    .adminwhite {
+        color: #cca;
+    }
+    .newuser {
+        color: #eef;
+    }
+    .admin2,
+    a.admin2 {
+        color: #880;
+    }
+    .artist,
+    .list {
+        color: #000;
+    }
+    .user {
+        color: var(--link) !important;
+    }
+    .usero {
+        color: #9c9 !important;
+    }
+    .user:hover,
+    .usero:hover {
+        color: var(--hover) !important;
+    }
+    .search_options,
+    .search_options_frame {
+        outline: 0;
+    }
+    .searchterm {
+        color: #777;
+        font-size: 1.3em;
+    }
+    .centertext {
+        width: 100%;
+    }
+    .small {
+        font-size: 0.9em;
+    }
+    .smallgray,
+    a.smallgray {
+        color: var(--dark-text);
+    }
+    .normal {
+        font-size: medium!important;
+    }
+    .chartlink,
+    .shortcut,
+    .smallgr2 {
+        font-size: x-small;
+    }
+    .smallgr2 {
+        color: #bbb;
+    }
+    .shortcut {
+        color: #99b;
+    }
+    .hint {
+        color: #999;
+        font-style: italic;
+    }
+    .chartlink {
+        color: #777;
+    }
+    a.chartlink {
+        color: #555!important;
+        font-size: x-small!important;
+        clear: none!important;
+        font-weight: 400!important;
+        display: inline!important;
+        list-style: none!important;
+        padding: 0!important;
+        margin: 0!important;
+    }
+    #usercollection ul,
+    .alpha,
+    .steps,
+    .yearlist,
+    li.comment,
+    ul.credits li,
+    ul.films li,
+    ul.issues li,
+    ul.lists li,
+    ul.shows li,
+    ul.suggestions li,
+    ul.tracks li.track,
+    ul.works li.work {
+        list-style: none;
+    }
+    .medium,
+    .mediumg {
+        font-size: medium;
+    }
+    .medium {
+        font-weight: 700;
+    }
+    .mediumg {
+        color: #777;
+        font-weight: 700;
+    }
+    .mediumg2 {
+        color: #555;
+        font-size: small;
+    }
+    .large {
+        font-size: large;
+        font-weight: 700;
+    }
+    .ookii,
+    .ookiig,
+    .ookiigg,
+    .ookiigr {
+        font-size: x-large!important;
+    }
+    .ookii {
+        font-weight: 700;
+    }
+    .ookiig {
+        color: #444;
+        font-weight: 700;
+    }
+    .ookiigg {
+        color: #666;
+        font-weight: 700;
+    }
+    .ookiigr {
+        color: #4a4;
+        font-weight: 700;
+    }
+    .oookiig {
+        color: #55b;
+        font-size: 16px!important;
+        font-weight: 700;
+        font-family: Trebuchet MS, Verdana, Arial;
+    }
+    .ooookiig {
+        color: #777;
+        font-size: 40px!important;
+        font-weight: 700;
+    }
+    .ranking {
+        font-size: 16px!important;
+        color: #46d;
+        font-weight: 700;
+    }
+    .topyear {
+        font-size: 4em;
+    }
+    .yearlink {
+        font-size: 2em;
+        font-weight: 700;
+    }
+    .top_albums_nav {
+        text-align: center;
+    }
+    table {
+        width: 100%;
+    }
+    #newestUsers th,
+    #userlists th,
+    .discography th {
+        text-align: left;
+        padding: 5px;
+        background-color: #dbdbdb;
+    }
+    #newestUsers td,
+    #useralbums td,
+    #userlists td,
+    #userrec td,
+    .discography td {
+        padding: 5px;
+    }
+    #newestUsers,
+    .discography {
+        background-color: #FAFAFA;
+        clear: left;
+        margin-bottom: 10px;
+    }
+    #newestUsers .userlink,
+    #newestUsers span {
+        font-size: 0.9em;
+    }
+    #newestUsers .mblock,
+    #newestUsers .mbnote {
+        font-size: small;
+        font-weight: 700;
+        margin-right: 5px;
+    }
+    #membersOnline th,
+    #userlists th,
+    .discography th {
+        text-align: left;
+        padding: 5px;
+        background-color: #dbdbdb;
+    }
+    #membersOnline td,
+    #useralbums td,
+    #userlists td,
+    #userrec td,
+    .discography td {
+        padding: 5px;
+    }
+    #membersOnline,
+    .discography {
+        background-color: #FAFAFA;
+        border: 1px solid #ddd;
+        clear: left;
+        margin-bottom: 10px;
+    }
+    #membersOnline .userlink,
+    #membersOnline span {
+        font-size: 0.9em;
+    }
+    #membersOnline .mblock,
+    #membersOnline .mbnote {
+        font-size: small;
+        font-weight: 700;
+        margin-right: 5px;
+    }
+    a.button {
+        background: var(--button);
+        color: var(--button-text);
+        border: 1px solid var(--border);
+    }
+    a.button:hover {
+        background: var(--button-hover);
+    }
+    a.tinybutton {
+        background: none;
+        color: var(--text);
+        border: none;
+    }
+    a.tinybutton:hover {
+        background: none;
+        color: var(--white);
+        border: none;
+    }
+    a.smallbutton {
+        background: var(--button);
+        color: var(--button-text);
+        border: 1px solid var(--border);
+    }
+    a.smallbutton:hover {
+        background: var(--button-hover);
+        color: var(--button-text);
+        border: 1px solid var(--border);
+    }
+    a.spellbutton,
+    a.suggestbutton {
+        color: #222;
+        padding: 1px;
+        line-height: 1.6em;
+    }
+    a.suggestbutton {
+        background-color: #d7ffd7;
+        border-right: 1px solid #bbb;
+        border-bottom: 1px solid #ccc;
+        margin: 3px;
+        font-weight: 700;
+    }
+    a.spellbutton {
+        background-color: #f2fff2;
+        margin: 3px;
+        font-weight: 700;
+    }
+    a.smalltab {
+        background-color: #ddf;
+        color: #000;
+        border-bottom: 1px solid #555;
+        padding: 5px;
+        margin: 3px;
+        line-height: 2.4em;
+    }
+    a.deletebutton,
+    a.printbutton {
+        margin: 3px;
+        line-height: 2.6em;
+    }
+    a.location {
+        color: var(--link);
+    }
+    a.location:hover {
+        color: var(--hover);
+    }
+    a.label {
+        color: var(--link);
+    }
+    a.label:hover {
+        color: var(--hover);
+    }
+    a.venue {
+        color: #000;
+        border-bottom: 1px solid #99b;
+    }
+    a.pending_venue {
+        border-bottom: 1px dotted #000;
+    }
+    a.pending_label {
+        border-bottom: 1px dotted #080;
+    }
+    a.buybutton,
+    a.buybutton:hover,
+    a.buybutton:visited,
+    a.deletebutton,
+    a.printbutton,
+    a.sm2button,
+    a.smallgraybutton {
+        border-bottom: 1px solid #555;
+    }
+    a.buybutton,
+    a.buybutton:hover,
+    a.buybutton:visited {
+        background-color: #066;
+        color: #fff;
+        padding: 4px;
+        margin: 4px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    a.picturebutton,
+    a.picturebutton:hover,
+    a.picturebutton:visited {
+        background-color: #0b0;
+        color: #fff;
+        border-right: 1px solid #999;
+        border-bottom: 1px solid #555;
+        padding: 5px;
+        margin: 4px;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: x-small;
+        font-weight: 700;
+    }
+    a.picturebutton img {
+        margin-bottom: -3px;
+        padding: 0;
+    }
+    a.deletebutton {
+        background-color: #b00;
+        color: #fff;
+        padding: 5px;
+        font-size: x-small;
+        font-weight: 700;
+    }
+    a.printbutton {
+        background-color: var(--foreground);
+        color: var(--text);
+        border: 1px solid var(--border);
+    }
+    a.smallgraybutton {
+        background-color: var(--foreground);
+        color: var(--text);
+        border: 1px solid var(--border);
+    }
+    a.ratingbutton,
+    a.ratingbutton:hover,
+    a.ratingbuttonhc,
+    a.taggingbutton,
+    a.taggingbutton:hover,
+    a.taggingbuttonhc,
+    a.taggingnull {
+        padding: 4px;
+        margin: 1px;
+        line-height: 2.3em;
+    }
+    a.sm2button {
+        background-color: #ddf;
+        color: #000;
+        padding: 5px;
+        margin: 1px;
+        font-size: x-small;
+        font-weight: 400;
+    }
+    a.ratingbutton:hover,
+    a.ratingbuttonhc {
+        background-color: #fd7;
+        color: #000;
+        border-bottom: 1px solid #999;
+        font-size: x-small;
+        font-weight: 700;
+    }
+    a.ratingbutton {
+        background-color: #eee;
+        color: #777;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        text-decoration: none;
+        font-size: x-small;
+        font-weight: 700;
+    }
+    a.taggingbutton:hover,
+    a.taggingbuttonhc {
+        background-color: #ccf;
+        color: #000;
+        border-right: 1px solid #999;
+        border-bottom: 1px solid #999;
+        font-size: x-small;
+        font-weight: 700;
+    }
+    a.taggingbutton,
+    a.taggingnull {
+        background-color: #eee;
+        color: #777;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        font-size: x-small;
+        font-weight: 700;
+    }
+    a.toolbutton:hover {
+        background-color: var(--button-hover);
+    }
+    a.toolbutton {
+        background-color: var(--button);
+        color: var(--button-text);
+        border: 1px solid var(--border);
+    }
+    .controlbar,
+    .tblstandard {
+        background-color: #eef;
+        clear: left;
+        padding: 2px;
+        margin-bottom: 10px;
+    }
+    .discography,
+    .tblstandard {
+        background-color: #FAFAFA;
+        clear: left;
+        margin-bottom: 10px;
+    }
+    .zerotable tr {
+        background: 0 0!important;
+    }
+    .zerotable td {
+        padding: 0!important;
+    }
+    .mbgen {
+        border: 1px solid var(--border);
+    }
+    .mbgen td {
+        border-left: 1px solid var(--border);
+        border-right: 1px solid var(--border) !important;
+    }
+    #mb,
+    #mb td,
+    #mb th,
+    .controlbar,
+    .discography {
+        border: 1px solid var(--border);
+    }
+    .mbgen span,
+    .mbgen .userlink {
+        font-size: 0.9em;
+    }
+    .mbgen .mblock,
+    .mbgen .mbnote {
+        font-size: small;
+        font-weight: 700;
+        margin-right: 5px;
+    }
+    #userlists th,
+    .discography th,
+    .mbgen th {
+        background-color: var(--foreground);
+    }
+    .mbgen th {
+        color: var(--text);
+        border-bottom: 1px var(--border) solid;
+    }
+    .mbgen tr {
+        background: var(--foreground) !important;
+        border-bottom: 1px solid var(--border);
+    }
+    div.bubble_content:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr {
+        border: none;
+    }
+    .profilehii > table:nth-child(1) tr,
+    .profilehii > table:nth-child(4) tr {
+        border-bottom: none;
+    }
+    div.bubble_content:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) > div:nth-child(1) > div:nth-child(1) {
+        background: none !important;
+        border: none;
+        border-bottom: none;
+    }
+    div.bubble_content:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > img:nth-child(1) {
+        border: none !important;
+    }
+    #allNotifications {
+        border: none !important;
+    }
+    .mbpost,
+    .mbpost blockquote {
+        padding: 20px 5px;
+    }
+    td.authorinfo {
+        vertical-align: top;
+        width: 150px;
+    }
+    #mb,
+    .controlbar {
+        background-color: var(--foreground);
+    }
+    a.sub2 img {
+        background: #eea;
+    }
+    #mb,
+    .discography {
+        background-color: #FAFAFA;
+        clear: left;
+        margin-bottom: 10px;
+    }
+    #minisearch,
+    .discography fieldset,
+    fieldset {
+        border: none;
+    }
+    #mb .userlink,
+    #mb span {
+        font-size: 0.9em;
+    }
+    #mb .mblock,
+    #mb .mbnote {
+        font-size: small;
+        font-weight: 700;
+        margin-right: 5px;
+    }
+    .mbpages {
+        margin-left: 10px;
+    }
+    #oldpost1 {
+        background-color: silver;
+    }
+    #oldpost7 {
+        background-color: #a0a0a0;
+    }
+    #oldpost30 {
+        background-color: grey;
+    }
+    #oldpost90 {
+        background-color: #606060;
+    }
+    #oldpost1,
+    #oldpost30,
+    #oldpost7,
+    #oldpost90 {
+        font-weight: 700;
+        color: #fff;
+    }
+    input,
+    select,
+    textarea {
+        font-family: Verdana, Tahoma, Arial Helvetica, sans-serif;
+        font-size: small;
+        font-weight: 400;
+    }
+    select {
+        min-width: 8em;
+    }
+    label {
+        font-weight: 700;
+    }
+    #searchfield,
+    #searchlist {
+        background-color: #FAFAFA;
+    }
+    #searchfield {
+        width: 8em;
+    }
+    #searchgo {
+        width: 2em;
+    }
+    #searchlist {
+        width: 5em;
+    }
+    #mbsearchbox {
+        border: none;
+        clear: both;
+        margin-bottom: 15px;
+    }
+    #mbsearchbox label {
+        clear: right;
+        font-size: small;
+    }
+    .ratebutton {
+        font-weight: 700;
+        color: #fff;
+        background-color: #99b;
+        font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+        width: 75px;
+    }
+    .dottedgray,
+    .quote {
+        font-family: Verdana, Tahoma, Arial;
+    }
+    .cellheader {
+        background: #ccc;
+        color: #fff;
+    }
+    .tasearchbox {
+        float: left;
+    }
+    .deemphasized {
+        color: gray;
+    }
+    .quote {
+        font-size: 9pt;
+        background: #eeeef2;
+        border: 1px solid #bbb;
+        color: #333;
+        padding: 5px;
+        margin: 5px 10px;
+    }
+    #tempform fieldset,
+    #tempform h3 {
+        margin-bottom: 15px;
+    }
+    .dottedgray {
+        font-size: 8pt;
+        background: #f0f0f0;
+        width: 90%;
+        border: 1px dashed #36c;
+        padding: 4px;
+    }
+    #profile,
+    .generic {
+        background: #eee;
+    }
+    .generic {
+        padding: 10px;
+        border: 2px solid #aaa;
+    }
+    #photos {
+        background: #dde;
+    }
+    #tempform fieldset {
+        padding: 15px;
+        background-color: #FAFAFA;
+        border: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+    }
+    #tempform br {
+        line-height: 4em;
+    }
+    #tempform input {
+        margin-left: 10px;
+    }
+    #tempform select {
+        width: auto;
+    }
+    #tempform input.checkbox {
+        margin-left: 0;
+    }
+    #tempform label {
+        clear: both;
+        margin-bottom: 20px;
+    }
+    .clear {
+        clear: both;
+    }
+    #akalist,
+    #milestonelist {
+        font-size: 8px;
+        background: #eee;
+        border: none;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    #akalist th,
+    #milestonelist th {
+        background: #eee;
+        border: 1px solid #000;
+        margin: 5px;
+        padding: 5px;
+    }
+    #akalist tr,
+    #milestonelist tr {
+        background: #eee;
+        border: 1px solid #000;
+        margin: 8px;
+        padding: 8px;
+    }
+    #signupcontainer {
+        margin-left: 25%;
+        width: 44em;
+    }
+    #smallForm fieldset {
+        width: 25em;
+        padding: 15px;
+        background-color: #FAFAFA;
+        border: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+    }
+    #smallForm input,
+    #smallForm select {
+        position: relative;
+        top: -1.4em;
+        left: 10em;
+        display: block;
+        width: auto;
+    }
+    #smallForm label {
+        clear: both;
+        float: left;
+        display: block;
+        width: 10em;
+        margin-top: -1em;
+        font-weight: 700;
+    }
+    #smallForm label.first {
+        margin-top: 5px;
+    }
+    #smallForm label.subtext {
+        margin-top: -1.8em;
+    }
+    #smallForm #go {
+        position: static;
+        clear: both;
+        float: left;
+        width: 13em;
+    }
+    #smallForm input.checkbox {
+        position: static;
+        clear: both;
+        float: left;
+        margin-right: 5px;
+        width: 1em;
+        margin-top: -2px;
+    }
+    #smallForm label.checklabel {
+        position: relative;
+        top: -1.2em;
+        display: inline;
+        width: 20em;
+        font-weight: 700;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    #smallForm .txtlabel {
+        width: 9em;
+        float: left;
+        display: block;
+        clear: both;
+        margin-top: -.3em;
+        font-weight: 700;
+    }
+    #smallForm .txtbox {
+        display: block;
+        float: left;
+        width: 10em;
+        margin-left: 1em;
+        margin-top: -.3em;
+        margin-bottom: 1.4em;
+    }
+    #smallForm #forgotpass {
+        display: block;
+        clear: both;
+        font-size: x-small;
+        font-family: Arial;
+        float: left;
+    }
+    .decade,
+    .or {
+        font-size: large;
+    }
+    #mediumForm #fancygo,
+    #smallForm #fancygo {
+        position: static;
+        clear: both;
+        float: left;
+        width: 9em;
+        background-color: #aac;
+        color: #fff;
+        font-weight: 700;
+        font-family: Helvetica;
+        border-top: 2px solid #c8c8de;
+        border-left: 2px solid #c8c8de;
+        border-right: 2px solid #aaa;
+        border-bottom: 2px solid #aaa;
+        height: 2em;
+    }
+    #largeForm fieldset,
+    #mediumForm fieldset {
+        padding: 15px;
+        background-color: #FAFAFA;
+        border-top: 1px solid #ddd;
+    }
+    .or {
+        display: block;
+        float: left;
+        clear: both;
+        margin-top: -1.3em;
+        margin-bottom: 0.5em;
+        padding: 10px;
+    }
+    #mediumForm fieldset {
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+    }
+    #mediumForm input,
+    #mediumForm select {
+        position: relative;
+        top: -1.4em;
+        left: 12em;
+        display: block;
+        width: 16em;
+    }
+    #mediumForm textarea {
+        clear: both;
+        display: block;
+        margin-bottom: 15px;
+        width: 33em;
+    }
+    #mediumForm label {
+        clear: both;
+        float: left;
+        display: block;
+        width: 10em;
+        margin-top: -1em;
+        font-weight: 700;
+    }
+    #mediumForm label.checklabel,
+    #mediumForm label.longer {
+        position: relative;
+        width: 35em;
+        margin-top: 10px;
+        display: inline;
+    }
+    #mediumForm label.first {
+        margin-top: 5px;
+    }
+    #mediumForm label.subtext {
+        margin-top: -1.8em;
+        margin-bottom: 1em;
+    }
+    #mediumForm #go {
+        position: static;
+        clear: both;
+        float: left;
+        width: 13em;
+    }
+    #mediumForm input.checkbox {
+        position: static;
+        clear: both;
+        float: left;
+        margin-right: 5px;
+        width: 1em;
+    }
+    #mediumForm label.longer {
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    #mediumForm label.checklabel {
+        top: -1.25em;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    #mediumForm input.blockbox {
+        position: static;
+        float: left;
+        top: -1.4em;
+        left: 12em;
+        display: block;
+        width: 16em;
+    }
+    #mediumForm label.blocklabel {
+        width: 30em;
+        margin-top: 0.3em;
+    }
+    #mediumForm input.smallbox,
+    #mediumForm select.smallbox {
+        width: 6em;
+    }
+    #mediumForm .txtlabel {
+        width: 9em;
+        float: left;
+        display: block;
+        clear: both;
+        margin-top: -.3em;
+        font-weight: 700;
+    }
+    #mediumForm .txtbox {
+        display: block;
+        float: left;
+        width: 10em;
+        margin-left: 1em;
+        margin-top: -.3em;
+        margin-bottom: 1.4em;
+    }
+    #mediumForm input.go2 {
+        position: static;
+        width: 5em;
+        float: left;
+        margin-left: 10px;
+    }
+    #largeForm fieldset {
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+    }
+    #largeForm input,
+    #largeForm select {
+        position: relative;
+        top: -1.4em;
+        left: 12em;
+        display: block;
+        width: 16em;
+    }
+    #largeForm textarea {
+        clear: both;
+        display: block;
+        margin-bottom: 15px;
+        width: 40em;
+    }
+    #largeForm label {
+        clear: both;
+        float: left;
+        display: block;
+        width: 10em;
+        margin-top: -1em;
+        font-weight: 700;
+    }
+    #largeForm label.first {
+        margin-top: 5px;
+    }
+    #largeForm label.subtext {
+        margin-top: -1.8em;
+        margin-bottom: 1em;
+    }
+    #largeForm #go {
+        position: static;
+        clear: both;
+        float: left;
+        width: 13em;
+    }
+    #largeForm input.checkbox {
+        position: static;
+        clear: both;
+        float: left;
+        margin-right: 5px;
+        width: 1em;
+    }
+    #largeForm label.checklabel {
+        position: relative;
+        top: -1.25em;
+        display: inline;
+        width: 20em;
+        font-weight: 700;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    #largeForm input.blockbox {
+        display: block;
+        position: static;
+        clear: both;
+        width: 40em;
+    }
+    #largeForm label.blocklabel {
+        display: block;
+        clear: both;
+        width: 50em;
+        margin-top: 0.3em;
+    }
+    #largeForm input.smallbox,
+    #largeForm select.smallbox {
+        width: 6em;
+    }
+    #largeForm .txtlabel {
+        width: 9em;
+        float: left;
+        display: block;
+        clear: both;
+        margin-top: -.3em;
+        font-weight: 700;
+    }
+    #largeForm .txtbox {
+        display: block;
+        float: left;
+        width: 10em;
+        margin-left: 1em;
+        margin-top: -.3em;
+        margin-bottom: 1.4em;
+    }
+    #largeForm input.go2 {
+        position: static;
+        width: 5em;
+        float: left;
+        margin-left: 10px;
+    }
+    #overlay,
+    .mbflag {
+        position: absolute;
+    }
+    .alpha li {
+        display: inline;
+        margin-right: 5px;
+    }
+    .decade {
+        font-weight: 700;
+    }
+    .yearlist {
+        float: left;
+        width: 16.5%;
+    }
+    .yearlist li {
+        padding: 5px;
+    }
+    .fancylist {
+        margin-bottom: 1em;
+        margin-left: 1em;
+        list-style-image: url("//e.snmc.io/2.5/img/images/star.png");
+        color: #55c;
+    }
+    .fancylist li {
+        font-size: small;
+        padding-left: 5px;
+    }
+    .fancylist span {
+        font-weight: 700;
+    }
+    .steps li {
+        display: inline;
+        color: #ddd;
+        font-size: large;
+        margin-right: 20px;
+    }
+    .steps #currentstep {
+        color: #aaa;
+    }
+    .steps span {
+        font-size: x-large;
+        padding-right: 10px;
+        font-weight: 700;
+    }
+    ol {
+        margin-left: 1.5em;
+    }
+    .newpostlink {
+        float: left;
+        font-weight: 700;
+    }
+    .gotopage,
+    .newpostlink {
+        margin-bottom: 15px;
+    }
+    .gotopage {
+        float: right;
+        font-weight: 700;
+    }
+    .gotopage a {
+        margin: 0 3px;
+    }
+    .hasart,
+    .hasdate,
+    .haseverything,
+    .hasnothing {
+        margin-right: 10px;
+    }
+    .hasart {
+        font-weight: 700;
+        color: gray;
+    }
+    .haseverything {
+        font-weight: 700;
+        color: #000;
+    }
+    .hasdate {
+        color: #000;
+        font-weight: 400;
+    }
+    .hasnothing {
+        color: gray;
+        font-weight: 400;
+    }
+    #usercollection a,
+    .opt {
+        font-weight: 700;
+    }
+    .opt {
+        font-size: smaller;
+        color: #bbb;
+    }
+    .frontrevlink {
+        float: right;
+        margin-top: 10px;
+    }
+    #usercollection img {
+        width: 150px;
+        height: 150px;
+        float: left;
+        margin: 0 15px 0 0;
+        padding: 0;
+    }
+    #usercollection div.panel1 {
+        float: left;
+        width: 40%;
+    }
+    #usercollection div.panel2 {
+        background-color: #FAFAFA;
+        float: right;
+        padding: 10px;
+        width: 23%;
+    }
+    #usercollection p {
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+        line-height: 1.5em;
+    }
+    #pminfo p,
+    #post_preview p {
+        font-size: 1.6em;
+        line-height: 1.4em;
+    }
+    #usercollection dd {
+        background-color: #eee;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    #usercollection dt {
+        font-size: 4em;
+        padding: 10px 15px;
+        margin: 40px 0 0;
+    }
+    #usercollection .albumtitle {
+        font-size: 1.5em;
+    }
+    #usercollection .artistname {
+        font-size: 1.3em;
+        color: #555;
+    }
+    #usercollection .rating1 {
+        font-size: 1.8em;
+    }
+    #usercollection .rating2 {
+        font-size: 1.6em;
+    }
+    #conversation_history,
+    #conversation_history tr {
+        background: var(--background);
+        border: 1px solid var(--border);
+    }
+    #conversation_history > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) {
+        background: var(--foreground) !important;
+        border-top: none;
+    }
+    #conversation_history > tbody:nth-child(1) > tr:nth-child(1) {
+        color: var(--text);
+    }
+    #pmcontainer p {
+        font-size: 1.1em;
+        margin: 0 10px;
+    }
+    .rbottom,
+    .rbottom1,
+    .rtop,
+    .rtop1 {
+        display: block;
+        background: #FFF;
+    }
+    .rbottom *,
+    .rbottom1 *,
+    .rtop *,
+    .rtop1 * {
+        display: block;
+        height: 1px;
+        overflow: hidden;
+    }
+    .r1 {
+        margin: 0 5px;
+    }
+    .r2 {
+        margin: 0 3px;
+    }
+    .r3 {
+        margin: 0 2px;
+    }
+    .r4 {
+        margin: 0 1px;
+        height: 2px;
+    }
+    #user_info .rbottom *,
+    #user_info .rtop * {
+        background: #E4EDFC;
+    }
+    #msg_body_preview {
+        padding: 20px;
+        background: #eee;
+        border: 1px solid #aaa;
+    }
+    div.findsearch,
+    div.findsearchc,
+    div.gosearch {
+        border: 1px solid #bbb;
+    }
+    #pmpreviewcontainer {
+        width: auto;
+    }
+    #pmpreview,
+    #pmpreview .rbottom *,
+    #pmpreview .rtop * {
+        background: #eee;
+    }
+    #pmpreview p {
+        margin-bottom: 10px;
+    }
+    #pmpreview p.subject {
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+    #body_preview,
+    #post_preview {
+        padding: 10px;
+        background: #e4edfc;
+        margin-bottom: 10px;
+    }
+    #post_preview .rbottom *,
+    #post_preview .rtop * {
+        background: #e4edfc;
+    }
+    #post_preview img {
+        float: left;
+        margin: 10px;
+    }
+    #pminfo,
+    #pminfo .rbottom *,
+    #pminfo .rtop * {
+        background: var(--foreground);
+    }
+    #pminfo .rtop,
+    #pminfo .rbottom {
+        background: var(--foreground);
+    }
+    #pminfo {
+        border: 1px solid var(--border);
+        border-bottom: none;
+        margin-bottom: 0;
+        height: 180px;
+    }
+    #pminfo img {
+        float: left;
+        margin: 10px;
+    }
+    #pminfo a.btn {
+        background: none;
+        color: var(--text);
+        border: none;
+    }
+    #pminfo a.btn:hover {
+        color: var(--white);
+    }
+    #pminfo > p:nth-child(4) {
+        color: var(--dark-text);
+    }
+    #pmbody,
+    #pmbody .rbottom *,
+    #pmbody .rtop * {
+        background: var(--foreground);
+    }
+    #pmbody .rtop,
+    #pmbody .rbottom {
+        background: var(--foreground);
+    }
+    #pmbody {
+        border: 1px solid var(--border);
+        border-top: none;
+    }
+    #pmbody > p:nth-child(3) {
+        color: var(--text);
+    }
+    #pmbody p.subject {
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+    div.findsearch,
+    div.findsearchc {
+        font-family: Trebuchet MS, Verdana, Arial;
+    }
+    a.actionbutton,
+    a.actionbutton_d,
+    a.actionbutton_queue {
+        border-right: 1px solid #222;
+    }
+    div.findsearch,
+    div.findsearchc,
+    div.profilesearch {
+        color: var(--text);
+    }
+    #q,
+    #filmq {
+        background: var(--background);
+        border: 1px solid var(--border);
+        padding: 3px;
+    }
+    div.bubble_content:nth-child(6) > div:nth-child(1) > div:nth-child(1) > form:nth-child(1) > select:nth-child(3),
+    div.bubble_content:nth-child(8) > div:nth-child(1) > div:nth-child(1) > form:nth-child(1) > select:nth-child(3) {
+        background: var(--background);
+        border: 1px solid var(--border);
+        padding: 3px;
+    }
+    div.bubble_content:nth-child(6) > div:nth-child(1) > div:nth-child(1) > form:nth-child(1) > input:nth-child(4),
+    div.bubble_content:nth-child(8) > div:nth-child(1) > div:nth-child(1) > form:nth-child(1) > input:nth-child(4) {
+        background: var(--background);
+        border: 1px solid var(--border);
+        padding: 3px;
+    }
+    div.bubble_content:nth-child(8) > div:nth-child(7) > a:nth-child(4),
+    div.bubble_content:nth-child(6) > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > a:nth-child(6) {
+        color: var(--link) !important;
+    }
+    div.bubble_content:nth-child(8) > div:nth-child(7) > a:nth-child(4):hover,
+    div.bubble_content:nth-child(6) > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > a:nth-child(6):hover {
+        color: var(--hover) !important;
+    }
+    #pmsubject,
+    #pmsubject .rbottom1 *,
+    #pmsubject .rtop1 * {
+        background: var(--foreground);
+    }
+    #pmsubject .rbottom1,
+    #pmsubject .rtop1 {
+        background: var(--foreground);
+    }
+    #pmsubject {
+        color: var(--text);
+    }
+    div.gosearch {
+        color: #226;
+        padding: 2px;
+        margin: 0;
+        background: #dde;
+    }
+    div.profilesearch {
+        background: var(--foreground);
+    }
+    div.findsearch {
+        font-weight: 400;
+        font-size: x-large;
+        width: 98%;
+        background: #dde;
+    }
+    div.findsearchc {
+        font-weight: 400;
+        font-size: medium;
+        width: 98%;
+        background: #dde;
+    }
+    .findsearchform input,
+    .findsearchform select {
+        font-size: large;
+    }
+    .findgenre {
+        font-size: 0.9em;
+        font-weight: 700;
+        color: #888;
+        padding-top: 10px;
+    }
+    .findgenre a,
+    .findgenre a:active,
+    .findgenre a:hover,
+    .findgenre a:visited {
+        font-size: 0.9em;
+        font-weight: 700;
+        color: #88d;
+    }
+    div.genrelist_g {
+        font-size: x-small;
+        color: #44b;
+        font-weight: 700;
+    }
+    div.genrelist_s {
+        font-size: x-small;
+        color: #448;
+    }
+    span.prediction {
+        font-size: 1.3em;
+        font-weight: 700;
+        color: maroon;
+    }
+    div.wishlist_album_art {
+        background: #000;
+        float: left;
+        margin: 3px;
+    }
+    div.wishlist_album_arti {
+        padding: 5px;
+        background: #000;
+    }
+    div.profilehic,
+    div.profilehir {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    div.wishlist_album_art b.rbottom1 *,
+    div.wishlist_album_art b.rtop1 * {
+        background: #000;
+    }
+    div.wishlist_album_art b.rbottom1,
+    div.wishlist_album_art b.rtop1 {
+        background: #eee;
+    }
+    div.wishlist_album_art b.rbottom1 b {
+        display: block;
+        height: 1px;
+        overflow: hidden;
+        background: #000;
+    }
+    div.profilehil {
+        font-size: small;
+        color: #fff;
+        padding-left: 10px;
+        padding-bottom: 3px;
+    }
+    div.profilehir {
+        text-align: right;
+        font-size: x-small;
+        color: #333;
+        padding-bottom: 3px;
+    }
+    div.profilehic {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 700;
+        color: #333;
+        padding-bottom: 3px;
+    }
+    div.profilehii {
+        color: var(--text);
+    }
+    div.profilehipic {
+        float: left;
+        left: 3px;
+        padding: 3px;
+        color: #333;
+    }
+    div.profilehir span {
+        font-size: large;
+        font-weight: 700;
+    }
+    div.profilehipic img {
+        border: 1px solid #333;
+    }
+    div.profileh {
+        background: #ddd;
+        width: 100%;
+    }
+    div.profileb {
+        background: #eee;
+        width: 100%;
+    }
+    div.profileb b.rbottom1,
+    div.profileh b.rtop1 {
+        display: block;
+        background: #FFF;
+    }
+    div.profileh b.rtop1 b {
+        display: block;
+        height: 1px;
+        overflow: hidden;
+        background: #ddd;
+    }
+    div.profileb b.rbottom1 b {
+        display: block;
+        height: 1px;
+        overflow: hidden;
+        background: #eee;
+    }
+    #messages,
+    #messages .rbottom *,
+    #messages .rtop * {
+        background: #e4edfc;
+    }
+    .artistbox,
+    .userbox {
+        width: 150px;
+        height: 220px;
+    }
+    .tag4,
+    .tag5 {
+        font-size: large;
+    }
+    .tag3 {
+        font-size: medium;
+    }
+    .tag2 {
+        font-size: small;
+    }
+    .tag1 {
+        font-size: x-small;
+    }
+    .tag0 {
+        font-size: xx-small;
+    }
+    .tagcount {
+        color: gray;
+        font-size: x-small;
+    }
+    #messages td {
+        padding: 2px;
+    }
+    .favbox,
+    .navbox,
+    .userbox {
+        padding: 10px;
+    }
+    #messages td.subj,
+    #messages th.subj {
+        width: 50%;
+    }
+    #messages {
+        font-family: 'Trebuchet MS', Verdana, Arial, sans-serif;
+        font-size: 1.1em;
+        margin: 5px 15px 10px;
+        width: 95%;
+    }
+    .artistbox,
+    .favbox,
+    .navbox,
+    .userbox {
+        margin: 10px;
+    }
+    #messages th {
+        text-align: left;
+    }
+    .artistbox,
+    .favbox,
+    .navbox,
+    .userbox {
+        text-align: center;
+    }
+    .navbox {
+        width: 90%;
+        background: #eee;
+        border: 2px solid #ddf;
+    }
+    .favbox,
+    .userbox {
+        border: 3px solid #888;
+    }
+    .favbox {
+        width: 150px;
+        height: 220px;
+        float: left;
+        background: #cfc;
+    }
+    .userbox {
+        float: left;
+        background: #ddf;
+    }
+    .notepad {
+        border: 2px solid #888;
+        background: #eea;
+        padding: 20px;
+    }
+    .artistbox {
+        float: left;
+        background: #eee;
+        padding: 10px;
+        border: 3px solid #888;
+    }
+    .profile_mosaic {
+        text-align: right;
+        padding-right: 10px;
+    }
+    #overlay,
+    .contribution,
+    .mbflag_form,
+    .mbflag_form input,
+    .or_q_header,
+    .or_q_mini_album,
+    .or_q_ownership,
+    .or_q_rating_date_d,
+    .or_q_rating_date_s,
+    .or_q_rating_date_s:hover,
+    .or_q_stars,
+    .or_q_starsrating,
+    .or_q_thumb_album,
+    div.contrib,
+    div.contrib_inner,
+    div.or_card_frame,
+    div.or_card_frame_inner,
+    div.rsummaryframe {
+        text-align: center;
+    }
+    .musictoolbar {
+        border: none;
+    }
+    a.actionbutton,
+    a.actionbutton_d,
+    a.actionbutton_queue {
+        border-bottom: 1px solid #222;
+    }
+    .mass_tag_box {
+        background: #eee;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #ddf;
+    }
+    .musictoolbar a {
+        border: 1px solid var(--border);
+        color: var(--button-text);
+        background: var(--button) !important;
+    }
+    .musictoolbar a:hover {
+        border: 1px solid var(--border);
+        color: var(--button-text);
+        background: var(--button-hover) !important;
+    }
+    #rating_pct_1 {
+        background: #b00;
+    }
+    #rating_pct_2 {
+        background: #b35;
+    }
+    #rating_pct_3 {
+        background: #b65;
+    }
+    #rating_pct_4 {
+        background: #b85;
+    }
+    #rating_pct_5 {
+        background: #ba5;
+    }
+    #rating_pct_6 {
+        background: #bb5;
+    }
+    #rating_pct_7 {
+        background: #ab5;
+    }
+    #rating_pct_8 {
+        background: #ab8;
+    }
+    #rating_pct_9 {
+        background: #ac8;
+    }
+    #rating_pct_10 {
+        background: #8c8;
+    }
+    .rating_pct {
+        border: 2px solid #999;
+        font-weight: 700;
+        color: #fff;
+    }
+    .ownership_bar {
+        border: 2px solid #888;
+        font-weight: 700;
+        background: #44d;
+        color: #fff;
+    }
+    .contribution {
+        border: none;
+        background: none;
+    }
+    .rss,
+    .rss:active,
+    .rss:link,
+    .rss:visited {
+        color: #fff;
+        background-color: #F60;
+        border-color: #FFC8A4 #7D3302 #3F1A01 #FF9A57;
+    }
+    .rss:hover {
+        color: #fff;
+        background-color: #F84;
+        border-color: #FFC8A4 #7D3302 #3F1A01 #FF9A57;
+    }
+    div.rsummaryframe {
+        float: left;
+        background: #999;
+        margin: 2px;
+    }
+    div.rsummaryframe .rbottom *,
+    div.rsummaryframe .rtop * {
+        background: #999;
+    }
+    div.or_u_frame .rbottom,
+    div.rsummaryframe .rtop {
+        background: #eee;
+    }
+    div.rsummaryframe b a {
+        font-size: 1em;
+        color: #fff;
+    }
+    div.or_card_frame {
+        width: 160px;
+        float: left;
+        color: #fff;
+        background: #222;
+        margin: 5px 10px 5px 5px;
+    }
+    div.or_card_frame .rbottom *,
+    div.or_card_frame .rtop * {
+        background: #222;
+    }
+    div.or_card_frame .rtop,
+    div.or_u_frame .rbottom {
+        background: #eee;
+    }
+    div.or_card_frame_inner {
+        width: 150px;
+        background: #fff;
+        margin: 5px;
+    }
+    div.or_card_frame_inner .rbottom *,
+    div.or_card_frame_inner .rtop * {
+        background: #fff;
+    }
+    div.contrib,
+    div.contrib .rbottom *,
+    div.contrib .rtop *,
+    div.or_card_frame_inner .rtop,
+    div.or_u_frame_inner .rbottom {
+        background: #222;
+    }
+    .card_link a,
+    .card_link a:hover {
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    .card_link {
+        color: #000;
+    }
+    a.card_link_bg,
+    a.card_link_bg:hover,
+    a.card_link_bg:visited {
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    .card_small {
+        font-size: 0.8em;
+        color: #fff;
+        font-weight: 400;
+    }
+    div.contrib {
+        color: #fff;
+        margin: 5px 10px 10px;
+    }
+    div.contrib .rtop,
+    div.or_u_frame .rbottom {
+        background: #eee;
+    }
+    div.contrib_inner {
+        background: #fff;
+        margin: 5px;
+    }
+    div.contrib_inner .rbottom *,
+    div.contrib_inner .rtop * {
+        background: #fff;
+    }
+    div.contrib_inner .rtop,
+    div.or_u_frame_inner .rbottom {
+        background: #222;
+    }
+    .contrib_cat {
+        font-size: 2em;
+    }
+    .contrib a {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    .or_q_mini_album {
+        width: 35px;
+    }
+    .or_q_thumb_album {
+        width: 50px;
+    }
+    .or_q_rating,
+    .or_q_starsrating {
+        font-size: large;
+        color: #444;
+        font-weight: 700;
+    }
+    .or_q_count {
+        font-size: x-large;
+        color: #444;
+        text-align: center;
+    }
+    .or_q_review {
+        color: #444;
+        margin-left: 5px;
+        padding: 30px;
+        border-left: 30px #ddd solid;
+    }
+    .or_q_stars,
+    .or_q_starsrating {
+        width: 9em;
+    }
+    .or_q_rating_date_s {
+        color: var(--dark-text);
+    }
+    .or_q_rating_date_s:hover {
+        color: var(--dark-text);
+    }
+    .or_q_rating_date_s > span {
+        color: rgb(0,0,0,0);
+    }
+    .or_q_ownership,
+    .or_q_albumartist {
+        color: var(--text);
+    }
+    .tagcloud {
+        background: #eee;
+        border: 2px solid #beb;
+        padding: 10px;
+    }
+    .mbflag {
+        background: #bdb;
+        border: 2px solid #880;
+        padding: 6px;
+        width: 12em;
+    }
+    .mbflag_form input {
+        width: 12em;
+        font-size: 10px;
+        background: #d84;
+        color: #fff;
+    }
+    #catalogTextFormat,
+    #catalogTextOwnership {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    #catalogTextOn {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    div.dtag,
+    div.tag {
+        margin: 2px;
+        font-weight: 700;
+    }
+    #tag_preview,
+    .tagger_add,
+    .tagger_list,
+    div.dtag,
+    div.tag {
+        font-size: x-small;
+    }
+    #overlay {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        background-image: url("//e.snmc.io/2.5/img/images/overlay.gif");
+    }
+    #overlay div#inner {
+        width: 300px;
+        top: 250px;
+        left: 50%;
+        position: absolute;
+        margin: 100px auto;
+        background-color: #fff;
+        border: 1px solid #000;
+        padding: 15px;
+        text-align: left;
+    }
+    #go_bar,
+    .rating_element,
+    .rating_element_ownership,
+    .rating_element_stars,
+    .rating_element_username {
+        text-align: center;
+    }
+    #overlay div#tagcheck,
+    #overlay div.tagbtns {
+        position: relative;
+        background: #eee;
+        padding: 10px;
+    }
+    #overlay div#tagcheck {
+        width: auto;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        margin: 0;
+        border: 2px solid #888;
+    }
+    #overlay div.tagbtns {
+        width: auto;
+        border: 1px solid #888;
+        border-top: none;
+    }
+    div.dtag,
+    div.tag {
+        padding: 3px 3px 3px 17px;
+    }
+    #legend,
+    #list_entry_dlg,
+    #tagger1,
+    .catalogdlg,
+    .list_entry_content,
+    .tagger,
+    .tagger_content,
+    div#shortcut,
+    div#shortcutshell,
+    div#tag_idsAuto {
+        position: absolute;
+    }
+    div.tag {
+        border: 2px solid #555;
+        background: url(//e.snmc.io/2.5/img/images/tagh.png)2px 4px no-repeat #D9E7FF;
+        width: auto;
+        float: left;
+        font-family: Verdana, Arial;
+    }
+    div.dtag {
+        border: 2px solid #888;
+        background: url(//e.snmc.io/2.5/img/images/tagd.png)2px 4px no-repeat #eee;
+        width: auto;
+        float: left;
+        font-family: Verdana, Arial;
+    }
+    #tagger1 {
+        top: 0;
+        left: 0;
+    }
+    .tagger {
+        z-index: 2000;
+        top: 70px;
+        left: 70px;
+        width: 250px;
+        height: 285px;
+    }
+    .tagger img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .tagger_content {
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 95%;
+        height: 95%;
+        background: #eee;
+        border: 1px solid #666;
+    }
+    #tagger_on {
+        background: #eef;
+    }
+    .tagger_tag {
+        float: left;
+    }
+    .tagger_header {
+        padding: 1px;
+        margin-bottom: 5px;
+    }
+    .tagger_list {
+        padding: 3px 1px 1px;
+        border: 1px solid #aaa;
+        background: #f8f8f8;
+        height: 180px;
+        overflow: auto;
+    }
+    .tagger_add {
+        padding: 2px;
+        border: 1px solid #aaa;
+        background: #fff;
+    }
+    #go_bar {
+        border: 1px solid #ddd;
+        background: #eee;
+        margin-bottom: 10px;
+    }
+    #tag_preview {
+        border: #ddd;
+        color: #aaa;
+    }
+    div#tag_idsAuto {
+        background: #EEE;
+        border: 1px solid #AAA;
+        color: #555;
+        display: none;
+        font-size: small;
+        width: 15em;
+        z-index: 1;
+    }
+    div#tag_idsAuto div {
+        cursor: default;
+        padding: 4px;
+        width: 100%;
+    }
+    html > body div#fieldAuto div {
+        width: auto;
+    }
+    div#tag_idsAuto div:hover {
+        background: #AAC;
+        color: #FFF;
+    }
+    .wrap1,
+    .wrap2,
+    .wrap3 {
+        display: inline;
+        display: block;
+    }
+    .wrap1 {
+        float: left;
+        background: url(//e.snmc.io/2.5/img/images/dshadow.gif)right bottom no-repeat;
+    }
+    .wrap2 {
+        background: url(//e.snmc.io/2.5/img/images/corner_bl.gif)left bottom no-repeat;
+    }
+    .wrap3 {
+        padding: 0 5px 5px 0;
+        background: url(//e.snmc.io/2.5/img/images/corner_tr.gif)right top no-repeat;
+    }
+    .legpop,
+    .legrat,
+    .legratg {
+        width: auto;
+        padding: 3px;
+    }
+    .wrap3 img {
+        display: block;
+    }
+    .bar {
+        height: 4px;
+        margin-bottom: 1px;
+    }
+    .albumdata {
+        background: #f8f8f8;
+        border: none;
+    }
+    .albumdata td.main {
+        border: none;
+        font-size: 18px;
+        color: #000;
+    }
+    .albumdata td {
+        border: none;
+        font-size: 14px;
+        color: #000;
+    }
+    .albumdata th {
+        font-weight: 400;
+        border: none;
+        background: #f8f8f8;
+        font-size: 12px;
+        color: #888;
+    }
+    .rating_element {
+        border: 1px solid #aaa;
+        background: #eee;
+        float: left;
+        width: 18em;
+        margin: 2px;
+    }
+    .date_element {
+        background: none;
+    }
+    .date_element_month {
+        color: var(--text);
+    }
+    .date_element_day {
+        color: var(--text);
+    }
+    .date_element_year {
+        color: var(--text);
+    }
+    .rating_element_ownership {
+        font-size: x-small;
+    }
+    .rating_element_ownership_c {
+        margin-top: 5px;
+        text-align: center;
+        font-weight: 700;
+        color: #444;
+        font-size: medium;
+    }
+    .legpop,
+    .legrat,
+    .legratg {
+        font-size: x-small;
+        text-align: right;
+    }
+    .rating_container {
+        float: left;
+        padding: 3px;
+        width: 13em;
+    }
+    .list_link {
+        margin: 7px;
+    }
+    .list_link .list {
+        font-weight: 700;
+    }
+    tr.selectedissue {
+        background: #eef;
+    }
+    .legpop {
+        float: left;
+        background: #df8;
+    }
+    .legrat {
+        float: left;
+        background: #f83;
+    }
+    .legratg {
+        color: #888;
+        float: left;
+        background: #eee;
+        border: 1px solid #bbb;
+    }
+    .list_inserter,
+    .list_inserter:hover {
+        font-size: 12px;
+        height: 20px;
+        padding: 1px;
+    }
+    .abmpop,
+    .abmrat,
+    .abmratf,
+    .abmratg {
+        font-size: 1px;
+    }
+    .abmpop {
+        margin: 0;
+        height: 4px;
+        background: #bbf;
+        border: 1px solid #99f;
+    }
+    .abmrat {
+        margin: 0;
+        height: 8px;
+        background: #d6f;
+        border: 1px solid #a6d;
+    }
+    .abmratg {
+        margin: 0;
+        height: 8px;
+        background: #eee;
+        border: 1px solid #bbb;
+    }
+    .abmratf {
+        margin: 0;
+        height: 4px;
+        background: #ada;
+        border: 1px solid #a9a;
+    }
+    .list_inserter {
+        cursor: pointer;
+        background: #eee;
+        font-weight: 700;
+        color: #bbb;
+        margin: 0;
+    }
+    .list_inserter:hover {
+        cursor: pointer;
+        background: #efe;
+        font-weight: 700;
+        color: green;
+        margin: 0;
+    }
+    #artist {
+        font-size: 14pt;
+        font-weight: 700;
+    }
+    #list_entry_dlg {
+        top: 0;
+        left: 0;
+    }
+    #list_new_item_btn {
+        width: 70%;
+        text-align: center;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 8px;
+        background: #ccf;
+    }
+    .list_entry {
+        position: absolute;
+        z-index: 2000;
+        top: 70px;
+        left: 70px;
+        width: 620px;
+        height: 420px;
+    }
+    .list_entry img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .list_entry_content {
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 95%;
+        height: 95%;
+        background: #eee;
+        border: 3px solid #666;
+    }
+    .label_header,
+    .venue_header {
+        background: #e8e8ff;
+    }
+    td.formfield {
+        font-size: large;
+    }
+    form.release_ac input.button {
+        background: #eee;
+    }
+    div.bubble_content:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) {
+        background: none !important;
+    }
+    div.bubble_content:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td,
+    div.bubble_content:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) > table:nth-child(1) {
+        border: none !important;
+    }
+    #tracklisting.mbgen tr {
+        background: #ddf;
+        color: #000;
+    }
+    #tracklisting.mbgen tr.shaded {
+        background: #eef;
+        color: #000;
+    }
+    #release_ac_country.mbgen tr {
+        background: #ddd;
+        color: #000;
+    }
+    #release_ac_country.mbgen tr.shaded {
+        background: #eee;
+        color: #000;
+    }
+    .center {
+        text-align: center;
+    }
+    p.countrylist_country {
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: 0;
+        color: #44b;
+    }
+    .concertbox,
+    .venuebox {
+        padding: 5px;
+        margin: 5px;
+    }
+    a.artist_rate,
+    a.artist_rate:hover {
+        color: #44d;
+    }
+    a.artist_rate_act,
+    a.artist_rate_act:hover {
+        color: #888;
+    }
+    a.artist_emp,
+    a.artist_emp:hover,
+    a.listpage_list,
+    a.listpage_list:hover,
+    a.searchpage,
+    a.searchpage:hover {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    .infobox {
+        background: var(--foreground);
+        border-radius: 0;
+        border: 1px solid var(--border);
+    }
+    .infobox:hover {
+        background: var(--foreground);
+    }
+    .subinfo {
+        color: var(--dark-text);
+    }
+    #index_right {
+        width: auto;
+        vertical-align: top;
+    }
+    #index_left {
+        width: 450px;
+        vertical-align: top;
+    }
+    .gr {
+        color: #88d;
+    }
+    .topsel {
+        background-color: #ddd;
+        font-size: 1em;
+        font-weight: 700;
+        color: #338;
+        text-align: center;
+        border: 0;
+    }
+    #legend,
+    .concertbox,
+    .venuebox {
+        background: #f8f8f8;
+    }
+    #legend {
+        font-size: x-small;
+        padding: 12px;
+        border: 2px solid #338;
+        width: 130px;
+    }
+    .venuebox {
+        border: 1px solid #aaa;
+    }
+    .concertbox {
+        border: 1px solid #ccc;
+    }
+    .spacer {
+        line-height: 1px;
+    }
+    .order_selecteditem {
+        background: #cdc;
+    }
+    .order_selected {
+        background: #ada;
+    }
+    a.light,
+    a.light:active {
+        font-weight: 700;
+        color: #888;
+    }
+    a.light:hover {
+        font-weight: 700;
+        color: #080;
+    }
+    a.navlinknext,
+    a.navlinknext:active,
+    a.navlinknext:visited,
+    a.navlinknum,
+    a.navlinknum:active,
+    a.navlinknum:visited,
+    a.navlinkprev,
+    a.navlinkprev:active,
+    a.navlinkprev:visited {
+        color: var(--link);
+    }
+    a.navlinknext:hover,
+    a.navlinknum:hover,
+    a.navlinkprev:hover {
+        color: var(--hover);
+    }
+    .navdot {
+        margin: 0;
+        color: #777;
+    }
+    .navlinkcurrent {
+        border: none;
+    }
+    .navpage {
+        margin: 0;
+        color: #777;
+    }
+    .navspan {
+        margin-bottom: 8px;
+    }
+    .wiki-image {
+        margin: 5px;
+    }
+    .wiki-content-box {
+        margin: 5px;
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
+    .wiki_link:hover {
+        text-decoration: underline;
+    }
+    ol.rymfmt,
+    ul.rymfmt {
+        margin-left: 25px;
+    }
+    li.rymfmt {
+        margin-left: 10px;
+    }
+    table.countries,
+    table.countries td,
+    table.countries td img,
+    table.countries td span,
+    table.countries tr {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .rating_element2 {
+        border: 1px solid #aaa;
+        background: #eee;
+        text-align: center;
+        margin: 2px;
+    }
+    .date_element2 {
+        border: 0 solid;
+        background: #ddd;
+        float: left;
+        width: 11em;
+    }
+    .date_element_month2 {
+        float: left;
+        font-size: 10px;
+        font-weight: 700;
+        color: #444;
+    }
+    .date_element_day2 {
+        float: left;
+        font-size: 18px;
+        font-weight: 700;
+        color: #888;
+    }
+    .date_element_year2 {
+        float: left;
+        font-size: 10px;
+        font-weight: 700;
+        color: #444;
+    }
+    .rating_element_stars2,
+    .rating_element_username2 {
+        text-align: center;
+    }
+    .rating_element_ownership2 {
+        text-align: center;
+        font-size: x-small;
+    }
+    .rating_element_ownership_c2 {
+        margin-top: 5px;
+        text-align: center;
+        font-weight: 700;
+        color: #444;
+        font-size: medium;
+    }
+    .rating_container2 {
+        padding: 3px;
+    }
+    table.datetbl,
+    table.datetbl td,
+    table.datetbl tr {
+        background: #eee;
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+    table.datetbl td.month {
+        text-align: center;
+        width: 2em!important;
+        font-family: monospace;
+        font-size: 14px;
+    }
+    table.datetbl td.day {
+        text-align: center;
+        width: 4em!important;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    table.datetbl td.year {
+        text-align: center;
+        width: 4em!important;
+        font-size: 13px;
+        font-family: monospace;
+    }
+    a.actionbutton,
+    a.actionbutton_d,
+    a.actionbutton_queue {
+        font-family: Verdana, Arial, sans-serif;
+    }
+    .or_q_rating_date_s span a {
+        color: #bbb;
+        text-decoration: none;
+    }
+    .or_q_rating_date_s span a:hover {
+        color: #88f;
+        text-decoration: none;
+    }
+    div.corqcomment_owner {
+        border: 1px solid var(--border);
+        background: var(--background);
+    }
+    div.corqcomment {
+        border: 1px solid var(--border);
+        background: var(--background);
+    }
+    div.textad {
+        display: none;
+    }
+    div.spreadtheword {
+        font-size: x-small;
+        color: #aaa;
+        text-align: right;
+    }
+    a.actionbutton:hover,
+    a.actionbuttonhc {
+        background-color: #fd7;
+        color: #000;
+        border-right: 1px solid #222;
+        border-bottom: 1px solid #222;
+        padding: 5px;
+        margin: 1px;
+        line-height: 2.5em;
+        font-family: Verdana, Arial, sans-serif;
+        text-decoration: none;
+        font-size: small;
+        font-weight: 700;
+    }
+    a.actionbutton_queue {
+        background-color: #884;
+        color: #fff;
+        padding: 5px;
+        margin: 1px;
+        line-height: 2em;
+        text-decoration: none;
+        font-size: x-small;
+        font-weight: 700;
+    }
+    a.actionbutton,
+    a.actionbutton_d {
+        line-height: 2.5em;
+        font-size: small;
+    }
+    a.actionbutton_d {
+        background-color: #bbb;
+        color: #888;
+        padding: 5px;
+        margin: 1px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    a.actionbutton {
+        background-color: #bbd;
+        color: #222;
+        padding: 5px;
+        margin: 1px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    div.profilehir_prev {
+        padding-right: 10px;
+        text-align: right;
+        font-size: x-small;
+        color: #333;
+        padding-left: 10px;
+        padding-bottom: 3px;
+    }
+    #blog h1,
+    .catalogdlg,
+    .more_comments,
+    .profile_caption {
+        text-align: center;
+    }
+    div.profileb_prev,
+    div.profileh_prev {
+        background: #dde;
+        width: 100%;
+    }
+    div.profileb_prev b.rbottom1_prev,
+    div.profileh_prev b.rtop1_prev {
+        display: block;
+        background: #eee;
+    }
+    div.profileb_prev b.rbottom1_prev b,
+    div.profileh_prev b.rtop1_prev b {
+        display: block;
+        height: 1px;
+        overflow: hidden;
+        background: #dde;
+    }
+    #popupblanket,
+    div.popupframe {
+        position: fixed!important;
+        display: none;
+    }
+    div#shortcut {
+        left: 400px;
+        width: 373px;
+        height: 353px;
+        z-Index: 5000;
+    }
+    div#shortcutshell {
+        width: 363px;
+        height: 343px;
+        background: #eee;
+        border: 1px solid #888;
+    }
+    div#shortcutform,
+    div#shortcutinner {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    div#shortcutsearch {
+        width: 340px;
+        height: 290px;
+    }
+    .catalogdlg {
+        z-index: 1000;
+        background: #555;
+        border-bottom: 1px #999 solid;
+        border-right: 1px #999 solid;
+        padding: 3px;
+        width: 100px;
+    }
+    #popupblanket {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #000;
+        filter: alpha(opacity=50);
+        opacity: 0.5;
+        z-index: 10000;
+    }
+    div.popupframe {
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10001;
+    }
+    .diff_changed {
+        background-color: #ffa;
+    }
+    .diff_added {
+        background-color: #cfc;
+    }
+    .diff_deleted {
+        background-color: #faa;
+    }
+    .rymzilla_summary {
+        background: #eee;
+        padding: 5px;
+        margins: 5px;
+        width: 80%;
+    }
+    .rymzilla_summary tr.pr0,
+    tr.pr0 a {
+        background: #FFC0B2;
+        color: #a22;
+    }
+    .rymzilla_summary tr.pr1,
+    tr.pr1 a {
+        background: #FFE18E;
+        color: #a22;
+    }
+    .rymzilla_summary tr.pr2,
+    tr.pr2 a {
+        background: #FFFFA5;
+        color: #880;
+    }
+    .rymzilla_summary tr.pr3,
+    tr.pr3 a {
+        background: #FFC;
+        color: #85855D;
+    }
+    .rymzilla_summary tr.pr4,
+    tr.pr4 a {
+        background: #FFFFF2;
+        color: #555;
+    }
+    .rymzilla_summary tr.pr5,
+    tr.pr5 a {
+        background: #F2F2F2;
+        color: #777;
+    }
+    .rymzilla_note {
+        border: 1px solid #ccc;
+        color: #000;
+        background-color: #eee;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .rymzilla_link {
+        text-decoration: none;
+    }
+    .rymzilla_link:hover {
+        text-decoration: underline;
+    }
+    .rymzilla_nav td {
+        font-size: 13px;
+    }
+    #blog h1 {
+        font-size: x-large;
+        clear: both;
+    }
+    #blog h2 {
+        height: auto;
+        margin-top: 0;
+        font-size: medium;
+        border-bottom: 1px solid #ccc;
+    }
+    .blog_post {
+        margin-bottom: 35px;
+    }
+    a.appearances_link {
+        font-weight: 700;
+    }
+    .modrequest_box {
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid #888;
+        background-color: #ffd;
+        box-shadow: 1px 1px rgba(0, 0, 0, .5);
+        color: #400;
+        border-radius: 1px;
+    }
+    a.mod_request_button {
+        padding: 4px;
+        line-height: 27px;
+        background: #fff;
+        border: 1px solid #ccc;
+        font-weight: 700;
+        margin: 0;
+    }
+    .modrequest_warning {
+        color: #b00;
+        font-weight: 700;
+    }
+    .modrequest_date {
+        margin-right: 6px;
+        color: #777;
+    }
+    #navtop a.sub {
+        font-size: 1em;
+        margin-left: 0.5em;
+    }
+    .profile_caption {
+        position: absolute;
+        color: #fff;
+        font-size: 11px;
+        line-height: 14px;
+        bottom: 0;
+        width: 100%;
+    }
+    .profile_caption_text {
+        display: block;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, .4);
+        transition: background 0.1s;
+        padding: 8px 10px;
+    }
+    #profile_image:hover .profile_caption_text {
+        background: rgba(0, 0, 0, .75);
+    }
+    a.game {
+        font-weight: 700;
+        color: #009f00;
+    }
+    a.game:hover {
+        font-weight: 700;
+        color: #444;
+    }
+    a.game_genre {
+        color: #009f00!important;
+        font-weight: 400;
+    }
+    a.game_company {
+        color: #4f9a4b;
+        border-bottom: 1px dotted #005;
+    }
+    .subscriber_notice {
+        padding: 8px;
+        margin: 5px;
+        background: #f8f8f8;
+        color: #333;
+        font-family: verdana;
+        font-size: 12px;
+    }
+    a.game_platform {
+        color: #044f00;
+    }
+    a.game_platform:hover {
+        color: #444;
+    }
+    .game_release td {
+        border: 0;
+    }
+    .subscriber_notice.small {
+        font-size: 10px;
+    }
+    #games_menu {
+        line-height: 150%;
+        float: right;
+        margin: 10px 25px 10px 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 0 15px 15px;
+        background-color: #eee;
+    }
+    .games_menu_header {
+        font-size: 150%;
+        font-weight: 700;
+        margin-bottom: 4px;
+        margin-top: 15px;
+    }
+    .subscriber_notice.small a {
+        color: #33b;
+    }
+    #games_menu a {
+        text-decoration: none;
+    }
+    .subscriber_notice a {
+        color: #00b;
+    }
+    h4 {
+        color: var(--link);
+    }
+    .more_comments {
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #eee;
+        color: #333;
+        font-weight: 700;
+    }
+    .queue_ratio_good,
+    .queue_ratio_med {
+        margin: 10px;
+        padding: 5px;
+        border-radius: 2px;
+    }
+    .more_comments:hover {
+        background: #fff;
+        cursor: pointer;
+    }
+    tr.supersticky {
+        background: #ffe;
+    }
+    td.supersticky a {
+        color: #d00;
+        font-weight: 700;
+    }
+    .queue_ratio_good {
+        background: #bfb;
+        color: #060;
+        border: 1px solid #8b8;
+    }
+    .queue_ratio_med {
+        background: #ffb;
+        color: #660;
+        border: 1px solid #bb8;
+    }
+    .queue_ratio_low {
+        background: #fbb;
+        color: #800;
+        border-radius: 2px;
+        border: 1px solid #b88;
+        padding: 5px;
+        margin: 10px;
+    }
+    .abpmessage,
+    .credited_list_inner {
+        background: #fff;
+        border-radius: 3px;
+    }
+    .hidden_default {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        margin: 0 0 0 3px;
+        padding: 3px !important;
+        display: inline-block;
+    }
+    .abpmessage {
+        padding: 5px 2%;
+        font-size: 0.95em;
+        color: #999;
+        border: 1px solid #eee;
+        margin-bottom: 10px;
+    }
+    table.trackratings,
+    table.trackratings tr td {
+        border: none;
+    }
+    .abpmessage a {
+        color: #00b;
+    }
+    .credited_list_inner {
+        box-shadow: 1px 1px rgba(0, 0, 0, .3);
+        padding: 6px;
+    }
+    .credited_list {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        padding-top: 16px;
+        min-width: 120px;
+        z-index: 5;
+    }
+    .credited_name {
+        font-size: 1em !important;
+        color: var(--link);
+    }
+    .credited_list:hover,
+    .credited_name:hover .credited_list,
+    .credited_name:hover .credited_list:hover {
+        display: inline-block;
+    }
+    .smallgray .credited_name .credited_list a.smallgray {
+        color: #008!important;
+        font-weight: 700;
+    }
+    .smallgray .credited_name {
+        color: #777;
+        font-weight: 400;
+    }
+    .or_card_frame .credited_name {
+        color: #fff;
+        font-size: 1.2em;
+    }
+    .or_card_frame .credited_name .credited_list {
+        top: 18px;
+        min-width: 150px;
+    }
+    .or_card_frame .credited_name .credited_list a.card_link_bg {
+        font-size: 12px!important;
+        color: #008!important;
+    }
+    .track_rating_header {
+        cursor: pointer;
+        padding: 3px 3px 3px 0;
+        margin-top: 10px;
+        font-size: 12px;
+        color: #555;
+        border-bottom: 1px #aaa solid;
+        margin-bottom: 4px;
+    }
+    a.work {
+        color: #3062e0;
+    }
+    a.work.major {
+        font-weight: 700;
+    }
+    a.film_genre {
+        color: var(--link) !important;
+    }
+    a.film_genre:hover {
+        color: var(--hover) !important;
+    }
+    .useri {
+        color: #000!important;
+    }
+    .userd {
+        color: #888!important;
+    }
+    .track_rating_header:hover {
+        color: #55b;
+        background: #eef;
+    }
+    table.trackratings tr {
+        border: none;
+        border-bottom: 1px #ddd solid;
+    }
+    div.main_searchbar {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+        border-radius: 0px;
+    }
+    #mainsearch_submit {
+        background: var(--foreground) !important;
+    }
+    #mainsearch > input:nth-child(3) {
+        color: var(--text);
+    }
+    div.search_options_frame {
+        color: var(--dark-text);
+    }
+    div.search_options {
+        background: var(--foreground);
+        border-radius: 0;
+        border: 1px solid var(--border);
+        border-top: 1px solid var(--foreground);
+    }
+    div.searchtype_option {
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 0;
+        padding: 2px 7px;
+    }
+    div.searchtype_option:hover {
+        background: none;
+        color: var(--white);
+    }
+    div.search_option_header {
+        color: var(--text);
+    }
+    div.helplink a {
+        color: var(--link) !important;
+    }
+    div.helplink a:hover {
+        color: var(--hover) !important;
+    }
+    #queue_stats {
+        width: 100%;
+        min-height: 40px;
+        background: #fff;
+        border-radius: 3px;
+    }
+    .queue_numwaiting {
+        font-size: 10px;
+    }
+    a.queue_random {
+        background-image: url("//e.snmc.io/2.5/img/dice2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        min-width: 16px;
+        min-height: 16px;
+        padding: 0;
+        margin: 0;
+    }
+    .code_red {
+        border: 3px solid #ff3d3d!important;
+    }
+    .code_orange {
+        border: 3px solid #ffc55f!important;
+    }
+    .code_green {
+        border: 3px solid #8b8!important;
+    }
+    .queue_item {
+        text-align: center;
+        display: inline-block;
+        clear: none;
+        padding: 6px 8px 10px;
+        border-radius: 3px;
+        margin: 0 10px 10px;
+        background: #f8f8f8;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px rgba(0, 0, 0, .4);
+        overflow: hidden;
+    }
+    .queue_header {
+        font-size: 16px;
+        border-bottom: 1px solid #ccc;
+        padding: 4px;
+    }
+    .queue_num {
+        text-align: center;
+        font-size: 15px;
+    }
+    .queue_stats {
+        font-size: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .queue_footer {
+        padding-top: 6px;
+        border-top: 1px solid #ccc;
+    }
+    a.queue_btn {
+        display: inline-block;
+        border-radius: 2px;
+        padding: 4px;
+        background-color: #eee;
+        font-weight: 400;
+        box-shadow: 1px 1px rgba(0, 0, 0, .3);
+        color: #000;
+        overflow: auto;
+        height: 16px;
+        line-height: 16px;
+        font-size: 14px;
+    }
+    .queue_chart_empty,
+    .queue_chart_progress {
+        border-radius: 5px;
+        height: 10px;
+    }
+    a.queue_btn:hover {
+        background-color: #f8f8f8;
+    }
+    a.queue_btn:active {
+        background-color: #eee;
+    }
+    .queue_chart_empty {
+        border: 1px solid #bbb;
+        display: block;
+        margin: 5px;
+    }
+    #rstar {
+        display: none;
+    }
+    .flag {
+        width: 16px;
+        height: 11px;
+        background: url(//e.snmc.io/2.5/img/images/flags8c.png)no-repeat;
+    }
+    .flag.flag-ad {
+        background-position: -16px 0;
+    }
+    .flag.flag-ae {
+        background-position: -32px 0;
+    }
+    .flag.flag-af {
+        background-position: -48px 0;
+    }
+    .flag.flag-ag {
+        background-position: -64px 0;
+    }
+    .flag.flag-ai {
+        background-position: -80px 0;
+    }
+    .flag.flag-al {
+        background-position: -96px 0;
+    }
+    .flag.flag-am {
+        background-position: -112px 0;
+    }
+    .flag.flag-an {
+        background-position: -128px 0;
+    }
+    .flag.flag-ao {
+        background-position: -144px 0;
+    }
+    .flag.flag-aq {
+        background-position: -144px -176px;
+    }
+    .flag.flag-ar {
+        background-position: -160px 0;
+    }
+    .flag.flag-as {
+        background-position: -176px 0;
+    }
+    .flag.flag-at {
+        background-position: -192px 0;
+    }
+    .flag.flag-au {
+        background-position: -208px 0;
+    }
+    .flag.flag-aw {
+        background-position: -224px 0;
+    }
+    .flag.flag-ax {
+        background-position: -112px -165px;
+    }
+    .flag.flag-az {
+        background-position: -240px 0;
+    }
+    .flag.flag-ba {
+        background-position: 0 -11px;
+    }
+    .flag.flag-bb {
+        background-position: -16px -11px;
+    }
+    .flag.flag-bd {
+        background-position: -32px -11px;
+    }
+    .flag.flag-be {
+        background-position: -48px -11px;
+    }
+    .flag.flag-bf {
+        background-position: -64px -11px;
+    }
+    .flag.flag-bg {
+        background-position: -80px -11px;
+    }
+    .flag.flag-bh {
+        background-position: -96px -11px;
+    }
+    .flag.flag-bi {
+        background-position: -112px -11px;
+    }
+    .flag.flag-bj {
+        background-position: -128px -11px;
+    }
+    .flag.flag-bl {
+        background-position: -128px -44px;
+    }
+    .flag.flag-bm {
+        background-position: -144px -11px;
+    }
+    .flag.flag-bn {
+        background-position: -160px -11px;
+    }
+    .flag.flag-bo {
+        background-position: -176px -11px;
+    }
+    .flag.flag-bq {
+        background-position: -32px -110px;
+    }
+    .flag.flag-br {
+        background-position: -192px -11px;
+    }
+    .flag.flag-bs {
+        background-position: -208px -11px;
+    }
+    .flag.flag-bt {
+        background-position: -224px -11px;
+    }
+    .flag.flag-bu {
+        background-position: -160px -176px;
+    }
+    .flag.flag-bv {
+        background-position: -48px -110px;
+    }
+    .flag.flag-bw {
+        background-position: 0 -22px;
+    }
+    .flag.flag-by {
+        background-position: -16px -22px;
+    }
+    .flag.flag-bz {
+        background-position: -32px -22px;
+    }
+    .flag.flag-ca {
+        background-position: -48px -22px;
+    }
+    .flag.flag-cc {
+        background-position: -128px -165px;
+    }
+    .flag.flag-cd {
+        background-position: -80px -22px;
+    }
+    .flag.flag-cf {
+        background-position: -96px -22px;
+    }
+    .flag.flag-cg {
+        background-position: -112px -22px;
+    }
+    .flag.flag-ch {
+        background-position: -128px -22px;
+    }
+    .flag.flag-ci {
+        background-position: -160px -165px;
+    }
+    .flag.flag-ck {
+        background-position: -160px -22px;
+    }
+    .flag.flag-cl {
+        background-position: -176px -22px;
+    }
+    .flag.flag-cm {
+        background-position: -192px -22px;
+    }
+    .flag.flag-cn {
+        background-position: -208px -22px;
+    }
+    .flag.flag-co {
+        background-position: -224px -22px;
+    }
+    .flag.flag-cr {
+        background-position: -240px -22px;
+    }
+    .flag.flag-cs {
+        background-position: -176px -176px;
+    }
+    .flag.flag-cu {
+        background-position: 0 -33px;
+    }
+    .flag.flag-cv {
+        background-position: -16px -33px;
+    }
+    .flag.flag-cw {
+        background-position: -48px -176px;
+    }
+    .flag.flag-cx {
+        background-position: -176px -165px;
+    }
+    .flag.flag-cy {
+        background-position: -32px -33px;
+    }
+    .flag.flag-cz {
+        background-position: -48px -33px;
+    }
+    .flag.flag-de {
+        background-position: -64px -33px;
+    }
+    .flag.flag-dj {
+        background-position: -80px -33px;
+    }
+    .flag.flag-dk {
+        background-position: -96px -33px;
+    }
+    .flag.flag-dm {
+        background-position: -112px -33px;
+    }
+    .flag.flag-do {
+        background-position: -128px -33px;
+    }
+    .flag.flag-dz {
+        background-position: -144px -33px;
+    }
+    .flag.flag-ec {
+        background-position: -160px -33px;
+    }
+    .flag.flag-ee {
+        background-position: -176px -33px;
+    }
+    .flag.flag-eg {
+        background-position: -192px -33px;
+    }
+    .flag.flag-eh {
+        background-position: -208px -33px;
+    }
+    .flag.flag-england {
+        background-position: -224px -33px;
+    }
+    .flag.flag-er {
+        background-position: -240px -33px;
+    }
+    .flag.flag-es {
+        background-position: 0 -44px;
+    }
+    .flag.flag-et {
+        background-position: -16px -44px;
+    }
+    .flag.flag-eu {
+        background-position: -96px -165px;
+    }
+    .flag.flag-fi {
+        background-position: -48px -44px;
+    }
+    .flag.flag-fj {
+        background-position: -64px -44px;
+    }
+    .flag.flag-fk {
+        background-position: -80px -44px;
+    }
+    .flag.flag-fm {
+        background-position: -96px -44px;
+    }
+    .flag.flag-fo {
+        background-position: -112px -44px;
+    }
+    .flag.flag-fr {
+        background-position: -128px -44px;
+    }
+    .flag.flag-ga {
+        background-position: -144px -44px;
+    }
+    .flag.flag-gb {
+        background-position: -160px -44px;
+    }
+    .flag.flag-gd {
+        background-position: -176px -44px;
+    }
+    .flag.flag-ge {
+        background-position: -192px -44px;
+    }
+    .flag.flag-gf {
+        background-position: -128px -44px;
+    }
+    .flag.flag-gg {
+        background-position: -64px -176px;
+    }
+    .flag.flag-gh {
+        background-position: -240px -44px;
+    }
+    .flag.flag-gi {
+        background-position: 0 -55px;
+    }
+    .flag.flag-gl {
+        background-position: -16px -55px;
+    }
+    .flag.flag-gm {
+        background-position: -32px -55px;
+    }
+    .flag.flag-gn {
+        background-position: -48px -55px;
+    }
+    .flag.flag-gp {
+        background-position: -128px -44px;
+    }
+    .flag.flag-gq {
+        background-position: -80px -55px;
+    }
+    .flag.flag-gr {
+        background-position: -96px -55px;
+    }
+    .flag.flag-gs {
+        background-position: -112px -55px;
+    }
+    .flag.flag-gt {
+        background-position: -128px -55px;
+    }
+    .flag.flag-gu {
+        background-position: -144px -55px;
+    }
+    .flag.flag-gw {
+        background-position: -160px -55px;
+    }
+    .flag.flag-gy {
+        background-position: -176px -55px;
+    }
+    .flag.flag-hk {
+        background-position: -192px -55px;
+    }
+    .flag.flag-hm {
+        background-position: -208px 0;
+    }
+    .flag.flag-hn {
+        background-position: -224px -55px;
+    }
+    .flag.flag-hr {
+        background-position: -240px -55px;
+    }
+    .flag.flag-ht {
+        background-position: 0 -66px;
+    }
+    .flag.flag-hu {
+        background-position: -16px -66px;
+    }
+    .flag.flag-id {
+        background-position: -32px -66px;
+    }
+    .flag.flag-ie {
+        background-position: -48px -66px;
+    }
+    .flag.flag-il {
+        background-position: -64px -66px;
+    }
+    .flag.flag-im {
+        background-position: -80px -176px;
+    }
+    .flag.flag-in {
+        background-position: -96px -66px;
+    }
+    .flag.flag-io {
+        background-position: -112px -66px;
+    }
+    .flag.flag-iq {
+        background-position: -128px -66px;
+    }
+    .flag.flag-ir {
+        background-position: -144px -66px;
+    }
+    .flag.flag-is {
+        background-position: -160px -66px;
+    }
+    .flag.flag-it {
+        background-position: -176px -66px;
+    }
+    .flag.flag-je {
+        background-position: -96px -176px;
+    }
+    .flag.flag-jm {
+        background-position: -208px -66px;
+    }
+    .flag.flag-jo {
+        background-position: -224px -66px;
+    }
+    .flag.flag-jp {
+        background-position: -240px -66px;
+    }
+    .flag.flag-ke {
+        background-position: 0 -77px;
+    }
+    .flag.flag-kg {
+        background-position: -16px -77px;
+    }
+    .flag.flag-kh {
+        background-position: -32px -77px;
+    }
+    .flag.flag-ki {
+        background-position: -48px -77px;
+    }
+    .flag.flag-km {
+        background-position: -64px -77px;
+    }
+    .flag.flag-kn {
+        background-position: -80px -77px;
+    }
+    .flag.flag-kp {
+        background-position: -96px -77px;
+    }
+    .flag.flag-kr {
+        background-position: -112px -77px;
+    }
+    .flag.flag-kw {
+        background-position: -128px -77px;
+    }
+    .flag.flag-ky {
+        background-position: -144px -77px;
+    }
+    .flag.flag-kz {
+        background-position: -160px -77px;
+    }
+    .flag.flag-la {
+        background-position: -176px -77px;
+    }
+    .flag.flag-lb {
+        background-position: -192px -77px;
+    }
+    .flag.flag-lc {
+        background-position: -208px -77px;
+    }
+    .flag.flag-li {
+        background-position: -224px -77px;
+    }
+    .flag.flag-lk {
+        background-position: -240px -77px;
+    }
+    .flag.flag-lr {
+        background-position: 0 -88px;
+    }
+    .flag.flag-ls {
+        background-position: -192px -165px;
+    }
+    .flag.flag-lt {
+        background-position: -32px -88px;
+    }
+    .flag.flag-lu {
+        background-position: -48px -88px;
+    }
+    .flag.flag-lv {
+        background-position: -64px -88px;
+    }
+    .flag.flag-ly {
+        background-position: -224px -165px;
+    }
+    .flag.flag-ma {
+        background-position: -96px -88px;
+    }
+    .flag.flag-mc {
+        background-position: -112px -88px;
+    }
+    .flag.flag-md {
+        background-position: -128px -88px;
+    }
+    .flag.flag-me {
+        background-position: -144px -88px;
+    }
+    .flag.flag-mf {
+        background-position: -128px -44px;
+    }
+    .flag.flag-mg {
+        background-position: -160px -88px;
+    }
+    .flag.flag-mh {
+        background-position: -176px -88px;
+    }
+    .flag.flag-mk {
+        background-position: -192px -88px;
+    }
+    .flag.flag-ml {
+        background-position: -208px -88px;
+    }
+    .flag.flag-mm {
+        background-position: -208px -165px;
+    }
+    .flag.flag-mn {
+        background-position: -240px -88px;
+    }
+    .flag.flag-mo {
+        background-position: 0 -99px;
+    }
+    .flag.flag-mp {
+        background-position: -16px -99px;
+    }
+    .flag.flag-mq {
+        background-position: -128px -44px;
+    }
+    .flag.flag-mr {
+        background-position: -48px -99px;
+    }
+    .flag.flag-ms {
+        background-position: -64px -99px;
+    }
+    .flag.flag-mt {
+        background-position: -80px -99px;
+    }
+    .flag.flag-mu {
+        background-position: -96px -99px;
+    }
+    .flag.flag-mv {
+        background-position: -112px -99px;
+    }
+    .flag.flag-mw {
+        background-position: 0 -176px;
+    }
+    .flag.flag-mx {
+        background-position: -144px -99px;
+    }
+    .flag.flag-my {
+        background-position: -160px -99px;
+    }
+    .flag.flag-mz {
+        background-position: -176px -99px;
+    }
+    .flag.flag-na {
+        background-position: -192px -99px;
+    }
+    .flag.flag-nc {
+        background-position: -208px -99px;
+    }
+    .flag.flag-ne {
+        background-position: -224px -99px;
+    }
+    .flag.flag-nf {
+        background-position: -240px -99px;
+    }
+    .flag.flag-ng {
+        background-position: 0 -110px;
+    }
+    .flag.flag-ni {
+        background-position: -16px -110px;
+    }
+    .flag.flag-nl {
+        background-position: -32px -110px;
+    }
+    .flag.flag-no {
+        background-position: -48px -110px;
+    }
+    .flag.flag-np {
+        background-position: -64px -110px;
+    }
+    .flag.flag-nr {
+        background-position: -80px -110px;
+    }
+    .flag.flag-nu {
+        background-position: -96px -110px;
+    }
+    .flag.flag-nz {
+        background-position: -112px -110px;
+    }
+    .flag.flag-om {
+        background-position: -128px -110px;
+    }
+    .flag.flag-pa {
+        background-position: -144px -110px;
+    }
+    .flag.flag-pe {
+        background-position: -160px -110px;
+    }
+    .flag.flag-pf {
+        background-position: -176px -110px;
+    }
+    .flag.flag-pg {
+        background-position: -192px -110px;
+    }
+    .flag.flag-ph {
+        background-position: -208px -110px;
+    }
+    .flag.flag-pk {
+        background-position: -224px -110px;
+    }
+    .flag.flag-pl {
+        background-position: -240px -110px;
+    }
+    .flag.flag-pm {
+        background-position: 0 -121px;
+    }
+    .flag.flag-pn {
+        background-position: -16px -121px;
+    }
+    .flag.flag-pr {
+        background-position: -32px -121px;
+    }
+    .flag.flag-ps {
+        background-position: -48px -121px;
+    }
+    .flag.flag-pt {
+        background-position: -64px -121px;
+    }
+    .flag.flag-pw {
+        background-position: -80px -121px;
+    }
+    .flag.flag-py {
+        background-position: -96px -121px;
+    }
+    .flag.flag-qa {
+        background-position: -112px -121px;
+    }
+    .flag.flag-re {
+        background-position: -128px -121px;
+    }
+    .flag.flag-ro {
+        background-position: -144px -121px;
+    }
+    .flag.flag-rs {
+        background-position: -160px -121px;
+    }
+    .flag.flag-ru {
+        background-position: -176px -121px;
+    }
+    .flag.flag-rw {
+        background-position: -192px -121px;
+    }
+    .flag.flag-sa {
+        background-position: -208px -121px;
+    }
+    .flag.flag-sb {
+        background-position: -224px -121px;
+    }
+    .flag.flag-sc {
+        background-position: -240px -121px;
+    }
+    .flag.flag-scotland {
+        background-position: 0 -132px;
+    }
+    .flag.flag-sd {
+        background-position: -16px -132px;
+    }
+    .flag.flag-se {
+        background-position: -32px -132px;
+    }
+    .flag.flag-sg {
+        background-position: -48px -132px;
+    }
+    .flag.flag-sh {
+        background-position: -64px -132px;
+    }
+    .flag.flag-si {
+        background-position: -80px -132px;
+    }
+    .flag.flag-sj {
+        background-position: -48px -110px;
+    }
+    .flag.flag-sk {
+        background-position: -96px -132px;
+    }
+    .flag.flag-sl {
+        background-position: -112px -132px;
+    }
+    .flag.flag-sm {
+        background-position: -128px -132px;
+    }
+    .flag.flag-sn {
+        background-position: -144px -132px;
+    }
+    .flag.flag-so {
+        background-position: -160px -132px;
+    }
+    .flag.flag-sr {
+        background-position: -176px -132px;
+    }
+    .flag.flag-ss {
+        background-position: -112px -176px;
+    }
+    .flag.flag-st {
+        background-position: -208px -132px;
+    }
+    .flag.flag-sv {
+        background-position: -224px -132px;
+    }
+    .flag.flag-sx {
+        background-position: -128px -176px;
+    }
+    .flag.flag-sy {
+        background-position: -240px -132px;
+    }
+    .flag.flag-sz {
+        background-position: 0 -143px;
+    }
+    .flag.flag-tc {
+        background-position: -16px -143px;
+    }
+    .flag.flag-td {
+        background-position: -144px -121px;
+    }
+    .flag.flag-tf {
+        background-position: -48px -143px;
+    }
+    .flag.flag-tg {
+        background-position: -64px -143px;
+    }
+    .flag.flag-th {
+        background-position: -80px -143px;
+    }
+    .flag.flag-tj {
+        background-position: -96px -143px;
+    }
+    .flag.flag-tk {
+        background-position: -224px -165px;
+    }
+    .flag.flag-tl {
+        background-position: -128px -143px;
+    }
+    .flag.flag-tm {
+        background-position: -144px -143px;
+    }
+    .flag.flag-tn {
+        background-position: -160px -143px;
+    }
+    .flag.flag-to {
+        background-position: -176px -143px;
+    }
+    .flag.flag-tr {
+        background-position: -192px -143px;
+    }
+    .flag.flag-tt {
+        background-position: -208px -143px;
+    }
+    .flag.flag-tv {
+        background-position: -16px -176px;
+    }
+    .flag.flag-tw {
+        background-position: -240px -143px;
+    }
+    .flag.flag-tz {
+        background-position: 0 -154px;
+    }
+    .flag.flag-ua {
+        background-position: -16px -154px;
+    }
+    .flag.flag-ug {
+        background-position: -32px -154px;
+    }
+    .flag.flag-um {
+        background-position: -48px -154px;
+    }
+    .flag.flag-us {
+        background-position: -64px -154px;
+    }
+    .flag.flag-uy {
+        background-position: -80px -154px;
+    }
+    .flag.flag-uz {
+        background-position: -32px -176px;
+    }
+    .flag.flag-va {
+        background-position: -112px -154px;
+    }
+    .flag.flag-vc {
+        background-position: -128px -154px;
+    }
+    .flag.flag-ve {
+        background-position: -144px -154px;
+    }
+    .flag.flag-vg {
+        background-position: -160px -154px;
+    }
+    .flag.flag-vi {
+        background-position: -176px -154px;
+    }
+    .flag.flag-vn {
+        background-position: -192px -154px;
+    }
+    .flag.flag-vu {
+        background-position: -208px -154px;
+    }
+    .flag.flag-wales {
+        background-position: -224px -154px;
+    }
+    .flag.flag-wf {
+        background-position: -240px -154px;
+    }
+    .flag.flag-ws {
+        background-position: 0 -165px;
+    }
+    .flag.flag-ye {
+        background-position: -16px -165px;
+    }
+    .flag.flag-yt {
+        background-position: -128px -44px;
+    }
+    .flag.flag-yu {
+        background-position: -192px -176px;
+    }
+    .flag.flag-za {
+        background-position: -48px -165px;
+    }
+    .flag.flag-zm {
+        background-position: -64px -165px;
+    }
+    .flag.flag-zw {
+        background-position: -80px -165px;
+    }
+    #tiptip_holder {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+    }
+    #tiptip_holder.tip_top {
+        padding-bottom: 5px;
+    }
+    #tiptip_holder.tip_bottom {
+        padding-top: 5px;
+    }
+    #tiptip_holder.tip_right {
+        padding-left: 5px;
+    }
+    #tiptip_holder.tip_left {
+        padding-right: 5px;
+    }
+    #tiptip_content {
+        font-size: 11px;
+        color: #fff;
+        text-shadow: 0 0 2px #000;
+        padding: 4px 8px;
+        border: 1px solid rgba(255, 255, 255, .25);
+        background-color: #191919;
+        background-color: rgba(25, 25, 25, .92);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#000));
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        box-shadow: 0 0 3px #555;
+        -webkit-box-shadow: 0 0 3px #555;
+        -moz-box-shadow: 0 0 3px #555;
+    }
+    #tiptip_arrow,
+    #tiptip_arrow_inner {
+        position: absolute;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 6px;
+        height: 0;
+        width: 0;
+    }
+    #tiptip_holder.tip_top #tiptip_arrow {
+        border-top-color: #fff;
+        border-top-color: rgba(255, 255, 255, .35);
+    }
+    #tiptip_holder.tip_bottom #tiptip_arrow {
+        border-bottom-color: #fff;
+        border-bottom-color: rgba(255, 255, 255, .35);
+    }
+    #tiptip_holder.tip_right #tiptip_arrow {
+        border-right-color: #fff;
+        border-right-color: rgba(255, 255, 255, .35);
+    }
+    #tiptip_holder.tip_left #tiptip_arrow {
+        border-left-color: #fff;
+        border-left-color: rgba(255, 255, 255, .35);
+    }
+    #tiptip_holder.tip_top #tiptip_arrow_inner {
+        margin-top: -7px;
+        margin-left: -6px;
+        border-top-color: #191919;
+        border-top-color: rgba(25, 25, 25, .92);
+    }
+    #tiptip_holder.tip_bottom #tiptip_arrow_inner {
+        margin-top: -5px;
+        margin-left: -6px;
+        border-bottom-color: #191919;
+        border-bottom-color: rgba(25, 25, 25, .92);
+    }
+    #tiptip_holder.tip_right #tiptip_arrow_inner {
+        margin-top: -6px;
+        margin-left: -5px;
+        border-right-color: #191919;
+        border-right-color: rgba(25, 25, 25, .92);
+    }
+    #tiptip_holder.tip_left #tiptip_arrow_inner {
+        margin-top: -6px;
+        margin-left: -7px;
+        border-left-color: #191919;
+        border-left-color: rgba(25, 25, 25, .92);
+    }
+    .artist_page {
+        background: var(--background);
+    }
+    .artist_left_col {
+        background: var(--background);
+    }
+    .artist_right_col {
+        background: var(--background);
+        border: none;
+    }
+    h1.artist_name_hdr {
+        color: var(--text);
+    }
+    .section_artist_biography {
+        color: var(--text);
+        background: var(--background);
+        border: none;
+    }
+    .section_artist_info {
+        color: var(--text);
+    }
+    .artist_info .info_hdr {
+        color: var(--dark-text);
+    }
+    .disco_rel_no_img {
+        background: var(--background);
+    }
+    .disco_rel_img {
+        border-radius: 0;
+    }
+    .disco_release {
+        border-radius: 0;
+    }
+    .disco_release:hover .disco_credit_info,
+    .release_credits .disco_release:hover .disco_expandcat,
+    .release_credits .disco_release:hover .disco_expandissues {
+        background: var(--foreground);
+    }
+    .disco_release:hover {
+        background: var(--foreground);
+    }
+    .disco_mainline a.album {
+        color: var(--link);
+    }
+    .disco_mainline a.album:hover {
+        color: var(--hover);
+    }
+    .disco_mainline span.subtext {
+        color: var(--dark-text);
+    }
+    .disco_year_ym,
+    .disco_year_ymd {
+        color: var(--dark-text);
+    }
+    .disco_ratings,
+    .disco_reviews {
+        color: var(--dark-text);
+    }
+    .disco_subline .credited_name {
+        color: var(--dark-text) !important;
+    }
+    a.disco_sub_artist {
+        color: var(--dark-text);
+    }
+    .disco_avg_rating {
+        color: var(--text);
+    }
+    .disco_expandissues {
+        color: var(--dark-text);
+        background: var(--background);
+    }
+    .disco_expandissues.has_cat {
+        border-left: 1px solid var(--border);
+    }
+    .disco_cat {
+        color: var(--dark-text);
+        background: none;
+    }
+    .disco_expandcat:hover .disco_cat,
+    .disco_expandcat:hover .disco_expandissues {
+        background: none;
+    }
+    .disco_cat_catalog_msg {
+        color: var(--dark-text);
+    }
+    .disco_release:hover .disco_cat_catalog_msg {
+        color: var(--dark-text);
+    }
+    .film_cataloger,
+    .issue_cataloger {
+        background: var(--foreground);
+    }
+    li.film_info .disco_cat_catalog_msg,
+    li.issue_info .disco_cat_catalog_msg {
+        display: inline-block;
+        color: #555;
+    }
+    .disco_cat_catalog_msg i {
+        font-size: 11px;
+        color: #888;
+    }
+    .disco_cat_inner,
+    .disco_cat_inner_issue {
+        background: none;
+        color: var(--dark-text);
+    }
+    .expand_num {
+        border-right: 1px solid var(--border);
+    }
+    .loading_issues {
+        border-radius: 3px;
+        background: #f0f0f0;
+        color: #555;
+        text-align: center;
+        height: 2em;
+        line-height: 2em;
+    }
+    .loading_disco {
+        border-radius: 3px;
+        background: #f8f8f8;
+        color: #999;
+        margin: 25px;
+        text-align: center;
+        height: 8em;
+        line-height: 8em;
+        font-size: 200%;
+    }
+    .disco_expandissues i {
+        margin-left: 0.1em;
+    }
+    .disco_header_section {
+        color: var(--dark-text);
+        border-bottom: none;
+    }
+    h2.page_section_active {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 0.95em;
+        margin: 0;
+        height: inherit!important;
+    }
+    h3.disco_header_label {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 0.95em;
+        color: var(--hover);
+    }
+    .disco_header {
+        font-size: 0.6em;
+        color: #757575;
+        text-align: center;
+        cursor: pointer;
+    }
+    .disco_header_top {
+        height: 2em;
+        line-height: 2em;
+        font-size: 1.3em;
+        margin-top: 1.05em;
+        margin-bottom: 0.3em;
+        text-align: left;
+    }
+    .disco_header_top:first-child {
+        margin-top: 0.66em;
+    }
+    .disco_header_issues {
+        float: right;
+        margin-right: 1.35em;
+        width: 5em;
+    }
+    .disco_header_rating {
+        float: right;
+        width: 5.5em;
+        margin-right: 9.8em;
+    }
+    .disco_header_rating_nocat {
+        float: right;
+        width: 5.5em;
+        margin-right: 0.5em;
+    }
+    .disco_header_rating_film {
+        float: right;
+        width: 5.5em;
+        margin-right: 12.4em;
+    }
+    .disco_header_divider {
+        float: left;
+        margin-right: 0.4em;
+        margin-left: 0.4em;
+    }
+    .disco_header_title {
+        float: left;
+        xwidth: 4em;
+        margin-left: 4.8em;
+    }
+    .disco_header_release_date {
+        float: left;
+        xwidth: 8em;
+    }
+    .disco_header_num_ratings {
+        float: right;
+        width: 4.5em;
+        margin-right: 0.2em;
+    }
+    .disco_header_num_both,
+    .disco_header_num_reviews {
+        float: right;
+        width: 4.5em;
+        margin-right: 0.5em;
+    }
+    .disco_showing {
+        margin-left: 1em;
+        font-size: 0.7em;
+        display: inline-block;
+        color: #888;
+    }
+    .disco_expand_section_link {
+        margin-left: 0.5em;
+        padding-left: 0.2em;
+        color: #005;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .disco_expand_section_link:before {
+        xcontent: "\2022 ";
+    }
+    .disco_expand_section_btn {
+        background: var(--button);
+        color: var(--button-text);
+        border: 1px solid var(--border);
+        border-radius: 0;
+    }
+    .disco_expand_section_btn:hover {
+        background: var(--button-hover);
+    }
+    span.rating_not_enough_data {
+        color: #aaa;
+    }
+    .artist_page ul.lists {
+        background: 0 0;
+        border: none;
+        padding: 0;
+    }
+    .artist_page ul.lists li {
+        background: 0 0;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .artist_page ul.lists.not_expanded .list_info {
+        margin-left: 0;
+    }
+    .artist_page ul.lists.not_expanded div.list_name a {
+        font-weight: 400;
+        color: #2323A0;
+        font-size: 1.2em;
+    }
+    .show_date,
+    span.work_title a {
+        font-weight: 700;
+    }
+    .artist_page .section_lists {
+        background: var(--background);
+        border: none;
+    }
+    .artist_page .section_discussion {
+        background: var(--background);
+        border: none;
+    }
+    div.row:nth-child(3) {
+        background: var(--background) !important;
+    }
+    #roughguide,
+    .rough_guide_link,
+    .rough_guide_text {
+        border-left: 1px #eee solid;
+    }
+    .artist_page .my_catalog_rating {
+        margin-left: 0;
+        margin-top: 0;
+        font-size: 1.1em;
+    }
+    .artist_page .my_catalog_catalog {
+        font-size: 1.1em;
+    }
+    .rough_guide_text {
+        text-align: left;
+        line-height: 1.25em;
+        padding: 20px 20px 5px;
+        border-bottom: 1px #ddd solid;
+        background: #f8f8f8;
+        color: #333;
+        font-size: 0.9em;
+    }
+    .rough_guide_text .comment_header {
+        background: #f8f8f8;
+        text-align: right;
+        margin-right: 40px;
+    }
+    .rough_guide_link {
+        text-align: center;
+        height: 3em;
+        line-height: 3em;
+        border-bottom: 1px #eee solid;
+        background: #f4f4f4;
+        color: #008;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .rough_guide_link:hover {
+        background: #f8f8f8;
+    }
+    #roughguide {
+        padding: 8px 25px;
+        background: #f0f0f0;
+        border-bottom: 1px #eee solid;
+    }
+    .disco_search {
+        border: 1px solid var(--border);
+        background: var(--foreground);
+        border-radius: 0;
+    }
+    .disco_remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        float: right;
+        overflow: hidden;
+        width: 2em;
+        line-height: 2.2em;
+        text-align: center;
+        cursor: pointer;
+    }
+    .disco_search i {
+        color: var(--dark-text);
+    }
+    .disco_remove i {
+        color: #888;
+        font-size: 1.3em;
+    }
+    .disco_search input {
+        background: none;
+        border: none;
+        color: var(--dark-text);
+    }
+    .disco_sort {
+        float: right;
+        position: relative;
+        font-size: 0.8em;
+        margin-left: 1.2em;
+    }
+    #disco_sort_chosen {
+        text-decoration: underline;
+        min-width: 5em;
+        display: inline-block;
+        text-align: center;
+    }
+    .disco_sort_chosen_option {
+        xfont-size: 0.9em;
+        padding: 0.4em 0.6em 0.4em 0.2em;
+        color: #666;
+        border-radius: 3px;
+    }
+    .ui_sort_selector_choice:hover {
+        background: #e8e8e8;
+    }
+    .ui_sort_selector_direction {
+        display: block;
+        float: right;
+        background: #eee;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 2px;
+        border-radius: 3px;
+        margin-top: -.2em;
+    }
+    .ui_sort_selector_direction:hover {
+        background: #fff;
+    }
+    .ui_sort_selector_direction.selected {
+        background: #ccc;
+    }
+    .disco_sort_options {
+        display: none;
+        position: absolute;
+        background: #fff;
+        border: 1px solid #ccc;
+        width: 13em;
+        right: 0;
+    }
+    .film_info,
+    div.comments,
+    ul.films li {
+        position: relative;
+    }
+    .disco_sort_option {
+        padding: 4px 0.5em;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        cursor: pointer;
+        display: block;
+        line-height: 1.6em;
+        font-size: 0.9em;
+    }
+    .disco_sort_option:hover {
+        background: #eee;
+    }
+    .disco_appearances {
+        float: right;
+        font-size: 0.8em;
+    }
+    .disco_issues_section {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    .disco_issues_section ul.issues {
+        padding: 2px;
+        border: none;
+    }
+    .issue_catalog {
+        height: 3.5em;
+        line-height: 3.5em;
+        min-width: 2.5em;
+        xfont-size: 0.8em;
+        color: #888;
+        text-align: center;
+        float: right;
+        border-radius: 3px;
+        xbackground: #eee;
+        margin-left: 1em;
+        cursor: pointer;
+    }
+    .large_tip_img {
+        min-width: 300px;
+        min-height: 300px;
+    }
+    .film_cataloger_close,
+    .issue_cataloger_close {
+        width: 2em;
+        text-align: center;
+        height: 2.5em;
+        line-height: 2.5em;
+        float: left;
+        cursor: pointer;
+    }
+    .artist_page.scope_film .release_page_header {
+        color: #964307;
+    }
+    span.contributors {
+        color: var(--text);
+    }
+    span.contributors a {
+        color: var(--link) !important;
+    }
+    .artist_page ul.shows {
+        background: 0 0;
+        border: none;
+        padding: 0;
+    }
+    ul.shows li {
+        color: var(--text);
+        background: var(--foreground);
+        border-radius: 0;
+        border: 1px solid var(--border);
+    }
+    .show_date {
+        width: 10em;
+        text-align: center;
+        color: #666;
+        float: left;
+    }
+    .show_info,
+    .show_venue {
+        width: 15em;
+        float: right;
+    }
+    ul.films li,
+    ul.works li.work {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    ul.works {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+    ul.works li.work {
+        color: #444;
+        background: #f0f0f0;
+        border-radius: 3px;
+        height: 2em;
+        line-height: 2em;
+        xmax-width: 370px;
+    }
+    ul.works li span,
+    ul.works li.work {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    span.work_date {
+        float: left;
+        margin-right: 0.8em;
+        width: 7em;
+        color: #666;
+    }
+    li.work_header {
+        font-size: 1.1em;
+        color: #333;
+        list-style: none;
+        height: 2em;
+        line-height: 2em;
+    }
+    span.work_type {
+        float: left;
+        margin-right: 0.8em;
+        font-size: 0.9em;
+        width: 12em;
+    }
+    .film_rel_img,
+    .film_rel_no_img {
+        float: left;
+        margin-right: 1em;
+        width: 2.8em;
+    }
+    span.work_role {
+        float: right;
+        margin-left: 0.8em;
+        color: #555;
+    }
+    span.work_numbers {
+        font-size: 0.9em;
+        color: #888;
+        margin-left: 0.5em;
+    }
+    ul.films li {
+        color: #444;
+        background: #f4f4f4;
+        border-radius: 3px;
+        xpadding-left: 0.5em;
+        xpadding-right: 0.5em;
+        height: 2.8em;
+        line-height: 2.8em;
+        xmax-width: 370px;
+        font-size: 1.05em;
+    }
+    ul.films li a.film {
+        font-weight: 400;
+    }
+    ul.films .film_mainline.recommended a.film {
+        font-weight: 700;
+    }
+    ul.films li,
+    ul.films li span {
+        xoverflow: hidden;
+        white-space: nowrap;
+    }
+    .film_rel_no_img {
+        height: 2.8em;
+        border-radius: 3px;
+        background: #d8d8d8;
+    }
+    .film_rel_img {
+        display: inline-block;
+        border-radius: 3px;
+        height: 2.8em;
+        background-position: center center!important;
+        background-repeat: no-repeat!important;
+        xbackground-size: 2.8em 2.8em!important;
+    }
+    .film_release {
+        height: 2.8em;
+        width: 100%;
+        display: block;
+        margin-top: 0.25em;
+        margin-bottom: 0.35em;
+        border-radius: 3px;
+        xborder-bottom: 1px #f2f2f2 solid;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .film_info {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .film_release:hover {
+        background: #fff;
+    }
+    .film_mainline {
+        height: 1.55em;
+        font-size: 1em;
+        line-height: 1.6em;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .film_mainline a {
+        font-weight: 400;
+    }
+    .film_mainline.recommended a {
+        font-weight: 700;
+    }
+    .film_subline,
+    .film_subline .credited_name {
+        font-size: 0.8em;
+        color: #777!important;
+        font-weight: 400!important;
+    }
+    .film_mainline span.subtext {
+        font-size: 0.9em;
+        color: #777;
+    }
+    .film_subline {
+        height: 1.3em;
+        line-height: 1.3em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .film_year_ym,
+    .film_year_ymd {
+        color: #444;
+    }
+    a.film_sub_artist {
+        color: #777;
+        text-decoration: none;
+    }
+    .film_ratings,
+    .film_reviews {
+        height: 3.5em;
+        font-size: 0.8em;
+        line-height: 3.5em;
+        width: 3.8em;
+        text-align: center;
+        color: #888;
+        float: right;
+    }
+    .film_avg_rating {
+        height: 2.54em;
+        font-size: 1.1em;
+        line-height: 2.54em;
+        width: 3.5em;
+        text-align: center;
+        font-weight: 700;
+        color: #444;
+        float: right;
+    }
+    .film_indicator {
+        height: 2.8em;
+        font-size: 1em;
+        line-height: 2.8em;
+        width: 1em;
+        text-align: center;
+        color: #444;
+        float: right;
+        display: none;
+    }
+    .artist_page_section_nav {
+        border-radius: 5px;
+        font-size: 1.4em;
+        height: 2em;
+        line-height: 2em;
+        xbackground: #fff;
+    }
+    .artist_page_section_nav a {
+        cursor: pointer;
+    }
+    .artist_page_section_active_film,
+    .artist_page_section_active_music {
+        float: left;
+        cursor: default;
+        border-bottom: 1px solid #4F58BB;
+    }
+    .artist_page_section_active_music {
+        color: #4F58BB;
+    }
+    .artist_page_section_active_film {
+        border-bottom: 1px solid #964307;
+        color: #964307;
+    }
+    .artist_page_section_button_film,
+    .artist_page_section_button_music {
+        color: var(--link) !important;
+        border-bottom: none;
+    }
+    .artist_page_section_button_film {
+        color: #886!important;
+    }
+    .artist_page_section_button_music:hover {
+        color: var(--hover) !important;
+        background: none;
+        border-bottom: none;
+    }
+    .artist_page_section_button_film:hover {
+        color: #964307!important;
+        background: #f3f3f3;
+        border-bottom: 1px solid #964307;
+    }
+    .artist_page_section_nav a.disabled {
+        color: gray;
+        cursor: default;
+    }
+    a.artist_page_section_button_film,
+    a.artist_page_section_button_music {
+        text-decoration: none;
+        color: inherit;
+    }
+    .artist_page_section_active_film span.subtext,
+    .artist_page_section_active_music span.subtext {
+        color: #999;
+        font-size: 0.8em;
+        font-weight: 400;
+        margin-left: 0.3em;
+    }
+    .artist_page_section_button_film .subtext,
+    .artist_page_section_button_music .subtext {
+        font-size: 0.8em;
+        font-weight: 400;
+        color: #888;
+        margin-left: 0.3em;
+    }
+    a.artist_page_section_button_film {
+        color: #440;
+    }
+    .artist_page_section_left {
+        border-right: none;
+    }
+    .label_music {
+        color: #4F58BB;
+    }
+    .label_film {
+        color: #964307;
+    }
+    .artist_page_section_left:hover,
+    .artist_page_section_right:hover {
+        xbackground: #eee;
+    }
+    .artist_page_section_left a.artist_page_section_button_music {
+        height: 2em;
+        line-height: 2em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin-left: 1em;
+    }
+    .artist_page_section_right a.artist_page_section_button_film {
+        height: 1em;
+        line-height: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        xmargin-right: 1em;
+    }
+    div[class^=coverart] {
+        background-color: var(--background);
+    }
+    div.comments {
+        background: var(--foreground);
+        border-radius: 0;
+        border: 1px solid var(--border);
+    }
+    div.comment {
+        background: var(--background);
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 0 !important;
+        color: var(--text);
+    }
+    div.smallcomment_area {
+        background: var(--background) !important;
+        border: 1px solid var(--border) !important;
+    }
+    #wrapper > div:nth-child(4) {
+        background: var(--background) !important;
+        border: none !important;
+    }
+    #list_comments_commentarea > div:nth-child(2) {
+        border: 1px solid var(--border) !important;
+        border-top: none !important;
+        background: var(--background) !important;
+    }
+    #shoutbox_commentarea > div:nth-child(2) {
+        background: var(--foreground) !important;
+        border: 1px solid var(--border) !important;
+        border-top: none !important;
+    }
+    #shoutbox_dummybutton {
+        background: var(--foreground);
+        border: none;
+        color: var(--text);
+    }
+    #shoutbox_dummybutton:hover {
+        background: var(--foreground);
+        border: none;
+        color: var(--white);
+        cursor: pointer;
+    }
+    #shoutbox_comments > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > input:nth-child(1) {
+        background: var(--foreground);
+        border: none;
+        color: var(--white);
+        cursor: pointer;
+    }
+    #users td:hover {
+        background: var(--foreground);
+    }
+    .comments_load {
+        border: 1px solid var(--border);
+        border-radius: 0;
+        color: var(--button-text);
+        background: var(--button);
+    }
+    .comments_load:hover {
+        background: var(--button-hover);
+    }
+    .comment_help {
+        display: none;
+        position: absolute;
+        width: 300px;
+        right: 0;
+        top: 25px;
+        border-radius: 3px;
+        padding: 15px;
+        color: #555;
+        background: padding-box #fff;
+        line-height: 15px;
+        font-size: 0.9em;
+        xcolor: #333;
+        border: 4px solid rgba(0, 0, 0, .5);
+        z-index: 80;
+    }
+    .comment_no_img {
+        background: none;
+    }
+    .comment_img {
+        display: inline-block;
+        border-radius: 3px;
+        height: 25px;
+    }
+    ul.comment_rules {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    ul.comment_rules li {
+        list-style-type: circle;
+        list-style-position: inside;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+    .comment_header {
+        background: none;
+    }
+    .comment_date {
+        color: var(--dark-text);
+    }
+    .comment_body {
+        color: var(--text);
+    }
+    .comment_cancel_btn,
+    .comment_post_add_btn,
+    .comment_post_btn {
+        background: var(--button);
+        color: var(--button-text);
+        border-radius: 0;
+        border: 1px solid var(--border);
+    }
+    .comment_cancel_btn:hover,
+    .comment_post_add_btn:hover,
+    .comment_post_btn:hover {
+        background: var(--button-hover);
+    }
+    .comments_post {
+        background: none;
+    }
+    .comments_post_loading {
+        position: absolute;
+        display: none;
+        background: rgba(168, 168, 168, .2);
+        border-radius: 4px;
+        width: 100%;
+        height: 100%;
+    }
+    .comment_new {
+        border-radius: 0;
+        border: 1px solid var(--border);
+        color: var(--text);
+    }
+    .comment_mod {
+        font-size: 0.8em;
+        color: var(--dark-text);
+        text-align: right;
+    }
+    .comment_mod span:hover {
+        cursor: pointer;
+        color: var(--text);
+    }
+    .comment_new.loading {
+        background: #e8e8e8;
+        border: 1px solid #e8e8e8;
+        color: #888;
+    }
+    .ebay_content {
+        float: left;
+        margin-left: 5px;
+        max-width: 600px;
+        margin-top: 10px;
+    }
+    #ebaylistings {
+        margin-top: 10px!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+        xwidth: 718px;
+    }
+    .ebay_logo,
+    div.issue_img,
+    div.issue_no_img,
+    span.issue_year {
+        margin-right: 10px;
+    }
+    #ebaytable,
+    #ebaytable tr {
+        border: none!important;
+    }
+    #ebaytable a {
+        text-decoration: none!important;
+    }
+    .sub_text {
+        font-size: 0.6em;
+        color: #888;
+        margin-left: 10px;
+    }
+    .film_right_column,
+    .game_right_column,
+    .release_right_column {
+        background: var(--background);
+    }
+    .no_content_message {
+        background: none;
+        border: none;
+        color: var(--text);
+    }
+    .page_section {
+        xborder-bottom: 1px #eee solid;
+    }
+    .release_right_column .page_section {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .release_right_column .section_main_info.section_outer {
+        padding: 25px 30px;
+    }
+    .release_right_column .section_issues.section_outer {
+        padding: 15px 30px;
+    }
+    .release_right_column .section_my_catalog.section_outer {
+        background: var(--background);
+        border: none;
+    }
+    .my_review {
+        background: var(--foreground);
+        border: none;
+    }
+    .release_right_column .section_reviews.section_outer {
+        border: none;
+    }
+    @media only screen and (max-width: 48.063em) {
+        .release_right_column .section_reviews.section_outer,
+        .section_issues.section_outer,
+        .section_my_catalog.section_outer {
+            padding-left: 1.2em!important;
+            padding-right: 1.2em!important;
+        }
+        .my_review {
+            width: 100%;
+            padding: 0;
+            background: 0 0;
+            border: none;
+            overflow: none;
+        }
+    }
+    .release_right_column .section_catalog.section_outer {
+        padding: 15px 30px;
+    }
+    .section_addl_info,
+    .section_cast,
+    .section_comments,
+    .section_credits,
+    .section_crew,
+    .section_discussion,
+    .section_lists,
+    .section_suggestions,
+    .section_videos {
+        padding: 10px 20px;
+    }
+    .section_tracklisting {
+        padding: 15px 20px 10px;
+    }
+    div.section_release_navigation {
+        border: none;
+    }
+    .release_page > div:nth-child(5) {
+        border: none !important;
+    }
+    .release_left_column {
+        background: var(--background);
+        border: none;
+    }
+    .large-4 > div:nth-child(1) {
+        background: var(--background) !important;
+    }
+    .return_banner {
+        height: 32px;
+        line-height: 32px;
+        font-size: 16px;
+        color: #888;
+        background: #f0f0f0;
+        margin-bottom: 40px;
+    }
+    .return_banner a {
+        text-decoration: none;
+    }
+    .buy_button {
+        width: 300px;
+        background: #585;
+        color: #fff!important;
+        text-decoration: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+    @media only screen and (min-width: 1300px) {
+        .buy_button {
+            width: 350px;
+        }
+    }
+    ul.credits {
+        background: var(--foreground);
+        border-radius: 0;
+        border: 1px solid var(--border);
+    }
+    #tracks > li > div:nth-child(2) > ul:nth-child(1) {
+        border: none;
+    }
+    ul.issues li,
+    ul.lists li {
+        xborder-bottom: 1px #eee solid;
+    }
+    ul.credits li:nth-child(even) {
+        xbackground: #fff;
+    }
+    .credits_artist a,
+    .credits_artist a:hover {
+        font-weight: 400;
+    }
+    .credits_artist.main a {
+        font-weight: 700;
+    }
+    .credits_roles {
+        color: #888;
+        margin-left: 3px;
+    }
+    .guest {
+        color: #888;
+    }
+    .role_name {
+        color: var(--dark-text);
+    }
+    .role_tracks {
+        display: none;
+        position: absolute;
+        top: 14px;
+        left: -5px;
+        color: #333;
+        z-index: 15;
+        background: #fff;
+        padding: 6px;
+        border-radius: 3px;
+        box-shadow: 2px 2px rgba(0, 0, 0, .3);
+        white-space: nowrap;
+    }
+    .role_name:hover .role_tracks,
+    a.genre_vote_btn {
+        display: inline-block;
+    }
+    .role_name.has_tracks {
+        color: #888;
+    }
+    .credit_expand_btn,
+    .issue_expand_btn,
+    .list_add_btn {
+        background: var(--button) !important;
+        border: 1px solid var(--border);
+        border-radius: 0 !important;
+        color: var(--button-text);
+    }
+    .credit_expand_btn:hover,
+    .issue_expand_btn:hover,
+    .list_add_btn:hover {
+        background: var(--button-hover) !important;
+    }
+    .list_add_btn a {
+        color: var(--button-text);
+    }
+    .album_title {
+        color: var(--text);
+    }
+    .album_shortcut {
+        color: var(--dark-text);
+    }
+    .release_img {
+        text-align: center;
+    }
+    .release_left_col {
+        background: var(--background);
+    }
+    .release_page_header,
+    .release_page_header h2 {
+        color: var(--hover);
+    }
+    .section_my_catalog div#release_touch_catalog_guidance {
+        color: var(--text);
+    }
+    #my_catalog .release_page_header span.subtext {
+        color: var(--dark-text);
+    }
+    .release_right_col {
+        background: var(--background);
+    }
+    div.release_nav_guidance_artist,
+    div.release_nav_guidance_artist i {
+        font-size: 0.9em;
+        line-height: 1.3em!important;
+    }
+    div.release_nav_guidance_artist i {
+        font-size: 1.1em;
+    }
+    div.release_navigation {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    div.release_navigation a {
+        text-decoration: none;
+    }
+    div.release_navigation_guidance {
+        border: none;
+        color: var(--dark-text);
+    }
+    div.release_navigation_links {
+        background: none;
+        border-radius: 0;
+    }
+    div.release_nav_guidance_left {
+        float: left;
+    }
+    div.release_nav_guidance_left a,
+    div.release_nav_guidance_right a {
+        color: #888;
+        text-decoration: none;
+    }
+    div.release_nav_guidance_right {
+        float: right;
+    }
+    div.release_nav_guidance_artist {
+        text-align: center;
+        width: 100%;
+    }
+    div.prev_image {
+        float: left;
+        width: 32px;
+        height: 32px;
+    }
+    div.prev_link {
+        float: left;
+        width: 38%;
+        max-width: 300px;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-left: 10px;
+    }
+    div.next_image {
+        float: right;
+        width: 32px;
+        height: 32px;
+        margin-left: 10px;
+    }
+    div.next_link {
+        float: right;
+        text-align: right;
+        width: 35%;
+        max-width: 300px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    div.release_nav_artist {
+        border-bottom: 1px solid #ddd;
+        font-size: 0.8em;
+        margin-top: 5px;
+        color: #555;
+    }
+    ul.issues li:last-child,
+    ul.lists li:last-child {
+        border-bottom: none;
+    }
+    a.genre_vote_btn {
+        color: #55c;
+        border: 1px solid #ddd;
+        background: #f4f4f4;
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 2px;
+        width: 80%;
+        max-width: 140px;
+        float: right;
+        opacity: 0;
+        transition: opacity 100ms;
+    }
+    tr.film_genres:hover a.genre_vote_btn,
+    tr.release_genres:hover a.genre_vote_btn {
+        opacity: 1;
+        color: #55c;
+        border: 1px solid #ccc;
+        background: #eef;
+    }
+    table.album_info,
+    table.film_info {
+        margin-top: 10px;
+        xmargin-bottom: 10px;
+    }
+    table.album_info a,
+    table.film_info a {
+        text-decoration: none;
+    }
+    .color_bar {
+        xmargin-bottom: 6px;
+    }
+    ul.suggestions {
+        border: 1px solid var(--border);
+        border-radius: 0;
+        background: var(--foreground);
+    }
+    ul.suggestions li {
+        background: none;
+    }
+    div.release_image {
+        float: left;
+        display: block;
+        height: 3em;
+        width: 3em;
+        margin-left: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    div.list_image,
+    ul.lists,
+    ul.lists li {
+        border-radius: 5px;
+    }
+    div.release_info {
+        height: 3em;
+        margin-left: 4em;
+    }
+    div.release_artist,
+    div.release_title {
+        height: 1.5em;
+        line-height: 1.5em;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 290px;
+    }
+    @media only screen and (min-width: 1300px) {
+        div.release_artist,
+        div.release_title {
+            max-width: 370px;
+        }
+        ul.suggestions li {
+            max-width: 430px;
+        }
+    }
+    div.release_title {
+        font-weight: 700;
+    }
+    div.release_title .subtext {
+        font-weight: 400;
+        font-size: 0.9em;
+        color: #888;
+    }
+    div.release_artist a.artist {
+        font-weight: 400;
+    }
+    .tracklist_num,
+    div.list_name a,
+    span.track_rating.recommended div.track_rating_avg,
+    ul.issues li.current .issue_info_top {
+        font-weight: 700;
+    }
+    div.release_artist {
+        color: #666;
+        font-size: 0.9em;
+    }
+    div.release_artist .subtext {
+        font-size: 0.9em;
+        color: #888;
+    }
+    ul.alt_titles {
+        display: none;
+    }
+    ul.alt_titles li {
+        list-style-type: none;
+    }
+    ul.lists {
+        border: 1px solid var(--border);
+        background: var(--foreground);
+        border-radius: 0;
+    }
+    ul.lists li {
+        background: none;
+    }
+    ul.lists li:hover {
+        background: none;
+    }
+    .list_name a {
+        color: var(--link) !important;
+    }
+    .list_name a:hover {
+        color: var(--hover) !important;
+    }
+    div.list_image {
+        float: left;
+        width: 3em;
+        height: 3em;
+        background-color: #ddd;
+    }
+    div.list_info {
+        margin-left: 3.9em;
+        height: 3em;
+    }
+    div.list_name {
+        height: 1.5em;
+        line-height: 1.5em;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 285px;
+    }
+    #add_to_list_lists {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+        border-radius: 0;
+    }
+    #add_to_list_lists a:hover {
+        background: none;
+    }
+    #add_to_list_btn {
+        color: var(--button-text);
+        background: var(--button);
+        border: 1px solid var(--border);
+    }
+    #add_to_list_btn:hover {
+        background: var(--button-hover);
+    }
+    @media only screen and (min-width: 1300px) {
+        div.list_info,
+        div.list_name {
+            max-width: 370px;
+        }
+    }
+    div.release_right_column div.list_info,
+    div.release_right_column div.list_name {
+        max-width: 900px!important;
+    }
+    div.list_author {
+        height: 16px;
+        line-height: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    div.list_name a {
+        font-size: 1.2em;
+        text-decoration: none;
+    }
+    div.list_author a {
+        font-size: 1.1em;
+        text-decoration: none;
+    }
+    ul.issues {
+        border-radius: 0;
+        background: var(--foreground);
+        border: 1px solid var(--border);
+    }
+    ul.issues.expanded {
+        max-height: inherit;
+    }
+    ul.issues li {
+        color: var(--dark-text);
+        background: var(--foreground);
+    }
+    ul.issues li.release_view a {
+        color: var(--link);
+    }
+    ul.issues li.release_view a:hover {
+        color: var(--hover);
+    }
+    ul.issues li:hover {
+        background: none;
+    }
+    ul.issues li.release_view {
+        background: none;
+    }
+    .release_info_classifiers {
+        color: var(--dark-text);
+    }
+    .track_credit_show_link {
+        color: var(--link);
+    }
+    .track_credit_show_link:hover {
+        color: var(--hover);
+    }
+    li.track ul.credits {
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding: 0;
+        background: 0 0;
+        xmargin-top: -4px;
+    }
+    li.track ul.credits li {
+        background: 0 0!important;
+        padding: 0 0 0 3px;
+        margin-bottom: 1px;
+        border: none;
+        xfont-size: 1em;
+    }
+    ul.tracks {
+        border: 1px solid var(--border);
+        border-radius: 0;
+        background: var(--foreground);
+    }
+    ul.tracks li.track {
+        color: var(--text);
+        background: none;
+        border: none;
+    }
+    .ratings_bar,
+    .track_download a,
+    .track_play,
+    .track_preview,
+    a.tag_save,
+    div.issue_img,
+    div.issue_no_img,
+    input.tag_tags {
+        border-radius: 3px;
+    }
+    .tracklist_num {
+        color: var(--dark-text);
+    }
+    .tracklist_title {
+        display: block;
+        xfloat: left;
+        font-size: 1.1em;
+        max-width: 250px;
+        min-height: 12px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        min-width: 100px;
+        padding-right: 3px;
+    }
+    @media only screen and (min-width: 1300px) {
+        .tracklist_title {
+            max-width: 340px;
+        }
+    }
+    ul.tracks.allcredits .tracklist_title {
+        font-size: 1.3em;
+    }
+    ul.tracks.allcredits .tracklist_duration {
+        font-size: 0.7692em;
+    }
+    .tracklist_duration {
+        display: inline-block;
+        margin-left: 7px;
+        color: #777;
+        font-size: 0.9em;
+    }
+    .track_play,
+    .track_preview {
+        margin-left: 10px;
+        font-size: 1.8em;
+    }
+    .track_preview {
+        float: right;
+        color: #999;
+        cursor: pointer;
+        width: 18px;
+        height: 12px;
+        text-align: center;
+    }
+    .track_play {
+        float: right;
+        color: #555;
+        cursor: pointer;
+        width: 18px;
+        height: 12px;
+        text-align: center;
+    }
+    .track_download a {
+        float: right;
+        font-size: 0.9em;
+        color: #999;
+        cursor: pointer;
+        width: 18px;
+        height: 12px;
+        text-align: center;
+        margin-left: 10px;
+    }
+    #acq_date_success,
+    #notes_success,
+    #track_rating_success {
+        color: #383;
+        display: none;
+    }
+    .track_rating {
+        float: right;
+        display: inline-block;
+        width: 25px;
+        text-align: left;
+        height: 18px;
+        padding-left: 6px;
+        padding-right: 2px;
+    }
+    div.issue_info_bottom,
+    div.issue_info_top {
+        height: 1.5em;
+        line-height: 1.5em;
+        padding-right: 5px;
+    }
+    .track_rating_disp {
+        float: right;
+        margin-top: -3px;
+        margin-right: 5px;
+    }
+    .track_rating_hide {
+        display: none;
+    }
+    span.track_rating.not_significant div.track_rating_avg {
+        color: #aaa;
+        font-weight: 400!important;
+    }
+    .track_rating_avg {
+        line-height: 12px;
+    }
+    .ratings_bar {
+        height: 2px;
+        background: #66b;
+    }
+    span.track_rating.not_significant div.ratings_bar {
+        background: #aaa;
+    }
+    a.affiliate_link {
+        color: var(--link);
+    }
+    a.affiliate_link:hover {
+        color: var(--hover);
+    }
+    #track_preview {
+        text-align: center;
+        margin-top: 10px;
+    }
+    span.main_issue_info {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 500px;
+    }
+    span.issue_cat,
+    span.issue_countries,
+    span.issue_formats,
+    span.issue_label {
+        display: block;
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    div.issue_info_top {
+        padding-left: 5px;
+    }
+    div.issue_info_bottom {
+        xpadding-left: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    span.issue_formats {
+        display: inline-block;
+        width: 136px;
+    }
+    span.issue_attributes {
+        color: var(--dark-text);
+    }
+    div.issue_img,
+    div.issue_no_img,
+    span.issue_year {
+        width: 3em;
+        margin-left: 0;
+    }
+    span.issue_attributes span.smallgray {
+        font-size: 9px;
+    }
+    span.issue_countries {
+        float: right;
+        text-align: right;
+        margin-right: 10px;
+        position: relative;
+        display: inline-block;
+        min-width: 100px;
+    }
+    div.additional_countries {
+        display: none;
+        position: absolute;
+        right: 0;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 4px;
+        top: -5px;
+    }
+    span.issue_countries:hover div.additional_countries {
+        display: block;
+    }
+    span.issue_label {
+        display: inline-block;
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    span.issue_cat {
+        display: inline-block;
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    div.issue_img,
+    div.issue_no_img,
+    span.issue_year {
+        color: #444;
+        display: block;
+    }
+    span.issue_title a {
+        color: var(--link);
+    }
+    span.issue_title a:hover {
+        color: var(--hover);
+    }
+    span.issue_year.ymd {
+        color: var(--dark-text);
+    }
+    span.issue_year.ym {
+        color: var(--dark-text);
+    }
+    span.issue_year.y {
+        color: var(--dark-text);
+    }
+    a.sametitle {
+        color: var(--link) !important;
+    }
+    a.sametitle:hover {
+        color: var(--hover) !important;
+    }
+    div.issue_no_img {
+        background: none;
+    }
+    .my_catalog_rating,
+    div.rating_loading,
+    div.rating_stars {
+        margin-right: 5px;
+        height: 16px;
+    }
+    span.issue_year {
+        float: left;
+        font-size: 0.9em;
+    }
+    th.info_hdr {
+        color: var(--text);
+    }
+    .album_info > tbody:nth-child(1) > tr:nth-child(8) > td:nth-child(2) {
+        color: var(--dark-text) !important;
+    }
+    table.album_info td,
+    table.film_info td {
+        padding: 3px;
+    }
+    table.album_info tr,
+    table.film_info tr {
+        xborder: 1px solid #dbdbdb;
+    }
+    table.album_info tr:nth-child(odd),
+    table.film_info tr:nth-child(odd) {
+        xbackground: #f8f8f8;
+    }
+    .avg_rating {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    .avg_rating_friends {
+        color: #383;
+        font-weight: 700;
+        font-size: 1em;
+    }
+    .max_rating {
+        font-size: 0.9em;
+        color: var(--text);
+    }
+    .num_ratings {
+        color: var(--text);
+    }
+    .release_touch_guidance {
+        font-size: 0.9em;
+        color: #888;
+        display: none;
+    }
+    .release_my_catalog {
+        xheight: 24px;
+        padding: 0;
+        xbackground: #fff;
+        line-height: 26px;
+    }
+    .my_catalog_rating {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+        border-radius: 0;
+        height: 18px
+    }
+    div.rating_stars {
+        background: url(//e.snmc.io/2.5/img/star_sprite_4.png)top left no-repeat;
+        display: block;
+        float: left;
+        width: 90px;
+    }
+    div.rating_loading {
+        display: none;
+        float: left;
+        width: 90px;
+        line-height: 17px;
+    }
+    div.rating_num {
+        color: var(--text);
+    }
+    div.loading div.rating_num,
+    div.loading div.rating_stars {
+        display: none;
+    }
+    div.loading div.rating_loading {
+        display: block;
+    }
+    .my_catalog_catalog {
+        float: left;
+        display: inline-block;
+        line-height: 2.2em;
+    }
+    .my_catalog_more,
+    .my_catalog_private_notes,
+    .my_catalog_rate_tracks,
+    .my_catalog_review {
+        float: left;
+        display: inline-block;
+    }
+    .my_catalog_review,
+    .my_catalog_tags {
+        float: left;
+        display: inline-block;
+        position: relative;
+        line-height: 2.2em;
+    }
+    .my_catalog_tags .tag_dlg {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+    }
+    .tag_dlg label {
+        color: var(--text);
+    }
+    input.tag_tags {
+        background: var(--background);
+        border: 1px solid var(--border);
+        border-radius: 0;
+    }
+    a.tag_save {
+        background: var(--button);
+        color: var(--button-text);
+        border: 1px solid var(--border);
+        border-radius: 0;
+    }
+    a.tag_save:hover {
+        background: var(--button-hover);
+    }
+    .bump_btn,
+    .catalog_btn,
+    .format_btn,
+    .more_btn,
+    .notes_btn,
+    .review_btn,
+    .review_save_btn,
+    .tag_btn,
+    .track_rating_btn {
+        background: var(--button) !important;
+        color: var(--button-text) !important;
+        border: 1px solid var(--border);
+        border-radius: 0;
+    }
+    .bump_btn:hover,
+    .catalog_btn:hover,
+    .more_btn:hover,
+    .notes_btn:hover,
+    .review_btn:hover,
+    .review_save_btn:hover,
+    .tag_btn:hover,
+    .track_rating_btn:hover {
+        background: var(--button-hover) !important;
+    }
+    .more_btn.has_more,
+    .review_btn.has_review {
+        background-color: #DDDCF3;
+        font-weight: 700;
+    }
+    .tag_btn.has_tags {
+        background-color: #DDDCF3;
+        font-weight: 700;
+    }
+    #format_note {
+        line-height: 12px;
+        color: #666;
+        background: #eee;
+        padding: 10px;
+    }
+    .format_btn_options {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+    }
+    .format_btn_option {
+        color: var(--dark-text);
+    }
+    .format_btn_option.default_format {
+        background: var(--foreground);
+    }
+    .format_btn_option:hover {
+        background: var(--foreground);
+        color: var(--white);
+    }
+    .format_btn {
+        background: none;
+    }
+    .catalog_btn_options {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+    }
+    .catalog_btn_option {
+        color: var(--dark-text);
+    }
+    .catalog_btn_option:hover {
+        background: var(--foreground);
+        color: var(--white);
+    }
+    .catalog_btn.catalog_o,
+    .catalog_btn.catalog_u,
+    .catalog_btn.catalog_w {
+        background: none;
+        color: var(--text);
+    }
+    .catalog_btn.catalog_u {
+        background: none;
+        color: var(--text);
+    }
+    .tag_btn {
+        background-image: none;
+        padding-left: 7px;
+    }
+    div.catalog_section {
+        background: var(--background);
+    }
+    .catalog_list span.navspan,
+    .review_list {
+        background: var(--background);
+    }
+    .review_list {
+        display: none;
+    }
+    .catalog_list span.navlinkcurrent,
+    .review_list span.navlinkcurrent {
+        color: var(--text);
+    }
+    .catalog_list span.navspan a,
+    .review_list span.navspan a {
+        color: var(--link);
+    }
+    .catalog_list span.navspan a:hover,
+    .review_list span.navspan a:hover {
+        color: var(--hover);
+    }
+    .review_sort {
+        color: var(--text);
+    }
+    .sort_choice {
+        color: var(--link);
+        border-right: 1px var(--border) solid;
+    }
+    .sort_choice:hover {
+        color: var(--hover);
+    }
+    .sort_choice.selected {
+        color: var(--text);
+    }
+    .catalog_stats {
+        background: var(--background);
+    }
+    .catalog_stats div.header {
+        color: var(--text);
+        background: var(--foreground);
+        border-radius: 0;
+        border: 1px solid var(--border);
+        border-bottom: none;
+    }
+    div[id^=chart_div] {
+        background: var(--background) !important;
+        border: 1px solid var(--border);
+    }
+    .catalog_header {
+        border: 1px solid var(--border);
+        border-radius: 0;
+        background: var(--foreground);
+    }
+    .catalog_rating_system_comment {
+        color: var(--dark-text);
+    }
+    .catalog_track_ratings {
+        color: var(--dark-text);
+    }
+    .catalog_date {
+        background: none;
+        color: var(--text);
+    }
+    .catalog_line.my_rating:hover .catalog_date {
+        color: var(--text);
+    }
+    .catalog_line.my_rating .catalog_date_inner {
+        background: none;
+        color: var(--text);
+        border: none;
+    }
+    .catalog_line.can_delete .catalog_delete,
+    .catalog_line.my_rating .catalog_bump {
+        background: var(--button);
+        color: var(--button-text);
+        border: 1px solid var(--border);
+        border-radius: 0;
+    }
+    .catalog_bump:hover {
+        background: var(--button-hover) !important;
+    }
+    .catalog_year {
+        color: var(--text);
+    }
+    .catalog_ownership {
+        color: var(--dark-text);
+    }
+    .contributor_header {
+        color: var(--text);
+    }
+    a.contribution_button,
+    a.review_delete_btn,
+    a.review_edit_btn {
+        background-color: var(--button);
+        color: var(--button-text);
+        border: 1px solid var(--border);
+    }
+    a.contribution_button:hover {
+        background-color: var(--button-hover);
+        color: var(--button-text);
+    }
+    .my_review label {
+        color: var(--text);
+    }
+    .saved_review {
+        background: var(--foreground);
+        border: none;
+        border-radius: 0;
+    }
+    label span.review_label {
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+    label span.subtext {
+        display: block;
+        font-weight: 400;
+        font-size: 0.95em;
+        color: #666;
+        margin-top: 4px;
+        margin-left: 10px;
+        max-width: 500px;
+        margin-bottom: 8px;
+    }
+    label span.inline_subtext {
+        font-weight: 400;
+        font-size: 0.95em;
+        color: #444;
+        margin-left: 5px;
+    }
+    .subtext ul {
+        margin-left: 24px;
+        margin-top: 5px;
+        margin-bottom: 9px;
+    }
+    .subtext ul li {
+        list-style: circle;
+    }
+    .subtext a {
+        text-decoration: none;
+        xfont-weight: bold;
+    }
+    #published_rules {
+        display: none;
+        color: #338;
+        font-weight: 700;
+    }
+    .textarea_toolbar {
+        height: 21px;
+        margin-top: 4px;
+        margin-bottom: 1px;
+    }
+    .star-0m,
+    .star-10m,
+    .star-1m,
+    .star-2m,
+    .star-3m,
+    .star-5m,
+    .star-6m,
+    .star-7m,
+    .star-8m,
+    .star-9m {
+        height: 16px;
+    }
+    .textarea_toolbar a {
+        padding: 3px 5px;
+        border: 1px solid #ccc;
+        background: #d8d8d8;
+        font-weight: 700;
+        margin-left: 3px;
+        margin-top: 6px;
+        margin-bottom: 4px;
+        text-decoration: none;
+        color: #888;
+        border-radius: 2px;
+        font-size: 0.8em;
+    }
+    .textarea_toolbar a:hover {
+        background: #ffd;
+        color: #666;
+    }
+    ul#track_ratings {
+        max-width: 500px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    ul#track_ratings .my_catalog_rating {
+        background-color: transparent;
+        border: none;
+    }
+    #my_track_ratings {
+        display: none;
+    }
+    #my_more_info {
+        display: none;
+        background: #f8f8f8;
+        padding: 15px;
+        width: auto;
+        border-radius: 5px;
+    }
+    .star-0m,
+    .star-10m,
+    .star-1m,
+    .star-2m,
+    .star-3m,
+    .star-5m,
+    .star-6m,
+    .star-7m,
+    .star-8m,
+    .star-9m {
+        width: 90px;
+    }
+    .review_body,
+    .youtube_container,
+    .youtube_embed {
+        display: inline-block;
+    }
+    ul#discussion {
+        border: 1px solid var(--border);
+        border-radius: 0;
+        background: var(--foreground);
+    }
+    .youtube_img,
+    .youtube_playbutton {
+        background-size: 320px!important;
+        border-radius: 5px;
+    }
+    ul#discussion li {
+        background: none;
+        color: var(--link)
+    }
+    ul#discussion li:hover {
+        color: var(--hover)
+    }
+    .youtube_img,
+    .youtube_playbutton {
+        background-repeat: no-repeat!important;
+    }
+    ul#discussion li a {
+        color: var(--link);
+    }
+    ul#discussion li:hover a {
+        color: var(--hover);
+    }
+    .star-0m {
+        background-position: 0 0!important;
+    }
+    .star-10m {
+        background-position: 0 -66px!important;
+    }
+    .star-1m {
+        background-position: 0 -132px!important;
+    }
+    .star-2m {
+        background-position: 0 -198px!important;
+    }
+    .star-3m {
+        background-position: 0 -264px!important;
+    }
+    .star-4m {
+        background-position: 0 -330px!important;
+        width: 90px;
+        height: 16px;
+    }
+    .star-5m {
+        background-position: 0 -396px!important;
+    }
+    .star-6m {
+        background-position: 0 -462px!important;
+    }
+    .star-7m {
+        background-position: 0 -528px!important;
+    }
+    .star-8m {
+        background-position: 0 -594px!important;
+    }
+    .star-9m {
+        background-position: 0 -660px!important;
+    }
+    .youtube_embed,
+    .youtube_img,
+    .youtube_playbutton {
+        width: 320px;
+        height: 200px;
+    }
+    .youtube_img,
+    .youtube_playbutton {
+        background-position: center!important;
+    }
+    .youtube_embed {
+        margin: 5px;
+    }
+    .youtube_img {
+        position: absolute;
+        z-index: 2;
+        background-color: #000;
+    }
+    .youtube_playbutton {
+        position: absolute;
+        z-index: 3;
+        opacity: 0.7;
+        transition: opacity 100ms;
+    }
+    .youtube_playbutton:hover {
+        opacity: 1;
+    }
+    .youtube_title {
+        position: absolute;
+        z-index: 4;
+        background: rgba(0, 0, 0, .3);
+        color: #fff;
+        top: 0;
+        width: 300px;
+        height: 32px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        line-height: 32px;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+    @media only screen and (min-width: 1300px) {
+        ul#discussion li {
+            max-width: 390px;
+        }
+        .youtube_embed,
+        .youtube_img,
+        .youtube_playbutton {
+            width: 400px;
+            height: 220px;
+        }
+        .youtube_title {
+            width: 380px;
+        }
+    }
+    .review_header_img,
+    .review_header_no_img {
+        width: 2.4em;
+        margin-right: 10px;
+        height: 2.4em;
+    }
+    .youtube_playicon {
+        position: absolute;
+        margin: 0 auto;
+    }
+    .youtube_playicon i {
+        font-size: 70px;
+        color: #fff;
+        text-shadow: 1px 1px #333;
+    }
+    .youtube_playicon:hover {
+        color: #fff;
+        opacity: 1;
+    }
+    .review {
+        border: 1px var(--border) solid;
+        background: var(--foreground);
+    }
+    .review_featured_info a.artist {
+        color: var(--link);
+    }
+    .review_featured_info a.artist:hover {
+        color: var(--hover);
+    }
+    .review_body,
+    .review_body span {
+        color: var(--text) !important;
+    }
+    .review_body {
+        background: var(--foreground);
+    }
+    .review_body.featured {
+        background: var(--foreground);
+    }
+    .review_body a.normal_link {
+        color: var(--link);
+    }
+    .review_body a.normal_link:hover {
+        color: var(--hover);
+    }
+    .review_title {
+        color: var(--text);
+    }
+    .review_header {
+        background: var(--foreground);
+    }
+    .review_header_no_img {
+        border-radius: 0;
+        background: var(--foreground);
+    }
+    .review_header_img {
+        border-radius: 0;
+    }
+    .review_issue_label {
+        color: var(--dark-text);
+    }
+    .review_attribution {
+        color: var(--dark-text);
+    }
+    .review_supplement {
+        color: var(--dark-text);
+    }
+    .review_supplement_expand {
+        background: var(--foreground);
+    }
+    .review_publish_status {
+        color: var(--dark-text);
+    }
+    .review_publish_status a {
+        color: var(--dark-text);
+    }
+    .catalog_header.friend,
+    .review_header.friend,
+    .my_rating .catalog_header {
+        background: var(--border);
+    }
+    .review_date {
+        color: var(--dark-text);
+    }
+    .review_help {
+        border-radius: 0;
+        color: var(--text);
+        background: padding-box var(--foreground);
+        border: 1px solid var(--border);
+    }
+    .voting_tip {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+        color: var(--text);
+    }
+    .review_vote_count {
+        color: var(--text);
+    }
+    .review_vote_bookmark:hover,
+    .review_vote_down:hover,
+    .review_vote_up:hover {
+        background: var(--foreground);
+    }
+    .review_voting i.fa-caret-down,
+    .review_voting i.fa-caret-up,
+    .review_voting i.fa-circle {
+        color: var(--text);
+    }
+    .review_vote_down.voted i {
+        color: red !important;
+    }
+    .review_vote_bookmark.bookmarked i {
+        color: magenta !important;
+    }
+    .review_vote_up.voted i {
+        color: green !important;
+    }
+    .rating_info_table {
+        border-radius: 0;
+        background: var(--background);
+    }
+    .rating_info_table div.disabled {
+        color: var(--dark-text);
+    }
+    .rating_info_table div.active {
+        color: var(--text);
+        background: var(--border);
+    }
+    .rating_info_cataloged,
+    .rating_info_ratings,
+    .rating_info_track_ratings {
+        color: var(--text);
+        background: var(--foreground);
+        border-radius: 0;
+        border: 1px var(--border) solid;
+    }
+    .rating_info_cataloged,
+    .rating_info_ratings {
+        border-right: none;
+    }
+    div#searchsuggestions {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+        color: var(--text);
+    }
+    div.suggestion {
+        background: var(--foreground);
+        color: var(--text);
+    }
+    div.suggestionsel {
+        color: var(--white);
+        background: var(--foreground);
+    }
+    .album_artist_small {
+        color: var(--text);
+    }
+    .film_left_column {
+        background: var(--background);
+        border-right: none;
+    }
+    a.descriptor_vote_btn,
+    a.genre_vote_btn {
+        color: var(--button-text);
+        border: 1px solid var(--border);
+        background: var(--button);
+        border-radius: 0;
+    }
+    tr.film_genres:hover a.genre_vote_btn,
+    tr.release_genres:hover a.genre_vote_btn {
+        color: var(--button-text);
+        border: 1px solid var(--border);
+        background: var(--button);
+    }
+    tr.film_descriptors:hover a.descriptor_vote_btn,
+    tr.release_descriptors:hover a.descriptor_vote_btn {
+        color: var(--button-text);
+        border: 1px solid var(--border);
+        background: var(--button);
+    }
+    a.descriptor_vote_btn:hover,
+    a.genre_vote_btn:hover {
+        color: var(--button-text) !important;
+        border: 1px solid var(--border);
+        background: var(--button-hover) !important;
+    }
+    .release_pri_descriptors {
+        color: var(--dark-text);
+    }
+    .album_info > tbody:nth-child(1) > tr {
+        color: var(--text);
+    }
+    #rating_pct_10 {
+        background-color: #b8d0de!important;
+    }
+    #rating_pct_9 {
+        background-color: #9fc2d6!important;
+    }
+    #rating_pct_8 {
+        background-color: #86b4cf!important;
+    }
+    #rating_pct_7 {
+        background-color: #73a2bd!important;
+    }
+    #rating_pct_6 {
+        background-color: #6792ab!important;
+    }
+    #rating_pct_5 {
+        background-color: #51779e!important;
+    }
+    #rating_pct_4 {
+        background-color: #33608f!important;
+    }
+    #rating_pct_3 {
+        background-color: #205082!important;
+    }
+    #rating_pct_2 {
+        background-color: #1b4775!important;
+    }
+    #rating_pct_1 {
+        background-color: #0c3663!important;
+    }
+    #rating_pct_0 {
+        background-color: #fff!important;
+    }
+    .r0 {
+        background: var(--foreground);
+    }
+    div[id^=region] > div:nth-child(2) > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) {
+        background: var(--foreground) !important;
+    }
+    .bubble_content > div[id^=chat] {
+        background: var(--foreground) !important;
+    }
+    .row {
+        background: var(--background) !important;
+        border: none !important;
+    }
+    .box {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+        color: var(--text);
+    }
+    .film_infox {
+        background: var(--foreground) !important;
+        border: 1px solid var(--border) !important;
+    }
+    .spoiler,
+    span.spoiler {
+        color: var(--text)!important;
+        border: 1px solid var(--hover);
+        background: var(--hover);
+    }
+    #content > div:nth-child(12) {
+        background: var(--background) !important;
+    }
+    #chartForm > select:nth-child(2),
+    #chartForm > select:nth-child(3),
+    #chartForm > select:nth-child(4),
+    #chartForm > select:nth-child(7),
+    #genres,
+    #include, 
+    #origin_countries,
+    #countries,
+    #chartForm > input:nth-child(31) {
+        background: var(--foreground) !important;
+        border: 1px solid var(--border) !important;
+        color: var(--text) !important;
+    }
+}
