@@ -1,26 +1,26 @@
 /* ==UserStyle==
 @name           DarkYM
-@version        1.0.0
+@version        1.0.1
 @description    dark theme for rateyourmusic.com based on RateYourMusic Tomorrow 2
 @author         mocha
 @namespace      github.com/jgchk/RateYourMusic-Dark
 ==/UserStyle== */
 
-:root {
-    --background: #222427;
-    --foreground: #27292d;
-    --border: #373b41;
-    --link: #81a2be;
-    --hover: #c66;
-    --text: #c5c8c6;
-    --dark-text: #969896;
-    --white: #fff;
-    --button: #4271ae;
-    --button-hover: #3e999f;
-    --button-text: #edeeed;
-}
-
 @-moz-document domain("rateyourmusic.com") {
+    :root {
+        --background: #222427;
+        --foreground: #27292d;
+        --border: #373b41;
+        --link: #81a2be;
+        --hover: #c66;
+        --text: #c5c8c6;
+        --dark-text: #969896;
+        --white: #fff;
+        --button: #4271ae;
+        --button-hover: #3e999f;
+        --button-text: #edeeed;
+    }
+    
     #navtop li,
     #navtop li.sub {
         border: none;
