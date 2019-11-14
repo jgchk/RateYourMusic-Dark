@@ -128,10 +128,10 @@
     
     #rstar {
         position: relative;
-        top: 2px;
+        top: 3px;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        background: url(https://rateyourmusic.com/favicon.ico) no-repeat;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK6SURBVDhPfVNLTBNRFD3TmaG0UD4V2tIC0gQ3EgxRNwYUo24MISGuVHa6NMa4MiFGd0qiiWJiSHDBRo0udCnqogkLFBMNAsUYIfJpS1sov+l/3ny8ryAEJJ7MnXfn3XfOe/fdOwL2IB6Ntuq6fp7cDrIGMitZUBCEERr7any+ORq3sS2wHI9XMMbupphxdS1nOOoc0lZkN0joMYnc3PrcFEgsLXHyYCCU6+oPJpHSTDSWS+g9UQG79M8hOYa9tbWnuWPhLyLfCYTVrtczeTisRagpsSKtibj/LY0Mie2D9mgk8ow7wmI4fFRRzdG+SSZn91lcViSg46CEZmdhr73wc4He0QRufVramvoPnCQmk45BflOFiWMHhAEu8PtNRPYrbCdXlmOYHp9HIrIGi0WA75AH/qbaregmbCJwqZ7FuEDyRchaqtPp1TxDcOQXZoNhqKq2uVIgYXoq3eXwNXpgdxQjm1GxHFrB4I3mJBfIPA9ZbYnYBj6/n4CyniYCnZN25mTDNJBRopBsDsilTpg0b1JclCz4cPt4jt9MKD69iMC7caznNRj2Ymh2KxhZnvwkS0JJrmFtZRFpG1WH5tIUqy7L8574yQWGrFoGG6KELCcYWSipOBQlhoxkglW5YcrlgL0KrMQGXTSRn5tAmxcwTTPAU6hP5fX5Mw+/QgvNwFBWC6n/hehtgFRdA4FS0VaXocdCKKVqvH3QzVxOx0kLddSCo1gaeNTpg5ZWYYilu4zFE8gGJ5GZmoIaXYIo2tBz5RyI/JRa+st27aizhofHIqeu9fF/Zn847DJ6ulvQ2eofkmX5cpXLtb5TfAKJPEll2fWXgTkExmL4sbABm1VCg7sE7UdcuNBWl3JX2volSbrn8njWOWeXAEc8FmsxdP0iXdBZ+jxMN62SP0v+R4vF8srj9X4vLCwA+AP6Qi941oh0/gAAAABJRU5ErkJggg==);
         background-size: 16px;
         width: 16px;
         height: 16px;
