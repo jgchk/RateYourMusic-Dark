@@ -1545,6 +1545,10 @@
         background: var(--foreground);
     }
     
+    .generic_desc {
+        color: var(--text);
+    }
+    
     .number,
     .generic_title {
         color: var(--text-gray);
