@@ -1250,6 +1250,10 @@
         color: var(--text-gray);
     }
     
+    span.contributors a {
+        color: var(--text) !important;
+    }
+    
     .infobox {
         color: var(--text);
         border: 1px solid var(--border);
