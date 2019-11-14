@@ -966,6 +966,14 @@
         color: var(--text) !important;
     }
     
+    .review_body a.normal_link {
+        color: var(--link);
+    }
+    
+    .review_body a.normal_link:hover {
+        color: var(--link-hover);
+    }
+    
     .review_title {
         color: var(--text-gray);
     }
