@@ -1472,6 +1472,7 @@
     }
     
     .disco_subline,
+    .disco_subline .credited_name,
     .disco_subline > span[style^='color:#888'] {
         color: var(--text-gray) !important;
     }
