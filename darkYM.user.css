@@ -31,6 +31,7 @@
         --button-text: #edeeed;
         
         --red: #cc6666;
+        --red-background: rgba(193, 66, 66, 0.2);
         --spoiler: #c9b4cf;
         
         --rating-10: #b8d0de;
@@ -581,7 +582,8 @@
     }
     
     td[style^='font-size:0.9em;color:#555;'],
-    td[style^='font-size:x-small;font-weight:normal;color:#555;']{
+    td[style^='font-size:x-small;font-weight:normal;color:#555;'],
+    td[style^='color:#333;font-size:0.9em;'] {
         color: var(--text-gray) !important;
     }
     
@@ -741,6 +743,14 @@
         border: 2px solid var(--border);
         border-radius: 0;
         background: var(--foreground);
+    }
+    
+    ul.credits li {
+        background: var(--foreground);
+    }
+    
+    .credits_roles {
+        color: var(--text-gray);
     }
     
     .role_name {
@@ -1031,6 +1041,12 @@
     ul.issues li {
         color: var(--text);
         background: var(--foreground);
+        border-radius: 0;
+    }
+    
+    ul.issues li:last-child,
+    ul.tracks li:last-child {
+        border-radius: 0;
     }
     
     ul.issues li:hover {
@@ -1046,7 +1062,8 @@
         color: var(--link) !important;
     }
     
-    span.issue_title a:hover {
+    span.issue_title a:hover,
+    li.current a.sametitle:hover {
         color: var(--link-hover) !important;
     }
     
@@ -1702,5 +1719,38 @@
     
     a.printbutton:hover {
         background: var(--button-hover);
+    }
+    
+    .note {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+    }
+    
+    td[style^='background:#ddd;text-align:center;'] {
+        background: var(--border) !important;
+        color: var(--text);
+    }
+    
+    ul.credits li.changed,
+    ul.credits li.changed:nth-child(2n) {
+        background-color: var(--red-background);
+    }
+    
+    ul.credits li.changed > div[style^='display:block;padding:2px;color:#666;'] {
+        color: var(--text-gray) !important;
+    }
+    
+    .r0 {
+        color: var(--text);
+        background: var(--red-background);
+    }
+    
+    div.corqcomment_owner {
+        border: 2px solid var(--border);
+        background: var(--foreground);
+    }
+    
+    div[style^='padding:12px;background:#f8f8f8'] {
+        background: var(--foreground) !important;
     }
 }
