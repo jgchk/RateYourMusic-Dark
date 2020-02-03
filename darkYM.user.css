@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           darkRYM
 @namespace      github.com/jgchk/RateYourMusic-Dark
-@version        1.2.0
+@version        1.2.1
 @description    dark theme for rateyourmusic.com based on RateYourMusic Tomorrow 2
 @author         mocha
 ==/UserStyle== */
@@ -59,7 +59,8 @@
     
     a:link,
     a:visited,
-    a.artist {
+    a.artist,
+    #navtop a.feature_link {
         color: var(--link);
     }
     
@@ -67,7 +68,8 @@
     a.artist:hover,
     a.album:hover,
     a.film:hover,
-    a.film_artist:hover {
+    a.film_artist:hover,
+    #navtop a.feature_link:hover {
         color: var(--link-hover);
     }
     
@@ -1928,6 +1930,12 @@
         color: var(--text) !important;
     }
     
+    .credits_delete a,
+    .credits_copy a {
+        border: none;
+        font-weight: bold;
+    }
+    
     div[style='position:absolute;right:3%;width:300px;padding:10px;border:1px #ddd solid;background:#f8f8f8;z-index:80;'] input[type='button'] {
         background: var(--button);
         color: var(--button-text);
@@ -1943,6 +1951,32 @@
         border: 1px solid var(--border) !important;
         border-radius: 0 !important;
         background: none !important;
+    }
+    
+    table.tracks tr,
+    table.tracks tr:nth-child(even) td {
+        background: var(--foreground);
+    }
+    
+    table.tracks td {
+        border: 1px solid var(--border);
+    }
+    
+    table.tracks td > input {
+        border: none !important;
+        background: var(--foreground) !important;
+    }
+    
+    table.tracks td > input[type=button],
+    table.tracks tr:nth-child(even) td > input[type=button] {
+        margin-left: 5px;
+        color: var(--link) !important;
+        font-weight: bold;
+    }
+    
+    table.tracks td > input[type=button]:hover,
+    table.tracks tr:nth-child(even) td > input[type=button]:hover {
+        color: var(--link-hover) !important;
     }
     
     #notes {
