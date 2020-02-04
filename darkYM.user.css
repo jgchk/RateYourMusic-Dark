@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           darkRYM
 @namespace      github.com/jgchk/RateYourMusic-Dark
-@version        1.2.2
+@version        1.2.3
 @description    dark theme for rateyourmusic.com based on RateYourMusic Tomorrow 2
 @author         mocha
 ==/UserStyle== */
@@ -2023,7 +2023,7 @@
         height: 0 !important;
     }
     
-    #importSourceBtn {
+    #import-source-btn {
         height: 26px !important;
         padding-left: 4px !important;
         padding-right: 4px !important;
@@ -2033,7 +2033,12 @@
         font-weight: bold;
     }
     
-    #importSourceBtn:hover {
+    #import-source-btn:hover {
         background: var(--button-hover);
+    }
+    
+    .source-box {
+        border: 1px solid var(--border);
+        background: var(--background);
     }
 }
