@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           darkRYM
 @namespace      github.com/jgchk/RateYourMusic-Dark
-@version        1.2.4
+@version        1.2.5
 @description    dark theme for rateyourmusic.com based on RateYourMusic Tomorrow 2
 @author         mocha
 ==/UserStyle== */
@@ -2048,5 +2048,19 @@
     
     .ui_stream_link_btn.brym.spinner .spinner-icon {
         border-top-color: var(--button-text);
+    }
+    
+    .spinner.add-release {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .spinner-icon.add-release {
+        border-top-color: var(--text);
+    }
+    
+    #wiki_content h2,
+    #wiki_content h3 {
+        color: var(--text);
     }
 }
