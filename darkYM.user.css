@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           darkRYM
 @namespace      github.com/jgchk/RateYourMusic-Dark
-@version        1.2.5
+@version        1.2.6
 @description    dark theme for rateyourmusic.com based on RateYourMusic Tomorrow 2
 @author         mocha
 ==/UserStyle== */
@@ -505,6 +505,10 @@
         border-bottom: 1px solid var(--border);
     }
     
+    div.commentbody {
+        color: var(--text) !important;
+    }
+    
     table.mbgen[style^='margin:14px;'] {
         margin: 0 !important;
     }
@@ -943,6 +947,13 @@
         border-radius: 0;
         background: var(--button);
         height: 28px;
+    }
+    
+    .more_btn.has_more,
+    .review_btn.has_review {
+        background: var(--button);
+        color: var(--button-text);
+        font-weight: bold;
     }
     
     .bump_btn:hover,
