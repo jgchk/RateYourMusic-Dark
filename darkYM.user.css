@@ -2075,20 +2075,81 @@
         color: var(--text);
     }
     
-    .mbgen tr:last-child {
-        background: var(--background) !important;
+    .mbgen tr:last-child[style='background:white;'] {
+        background: none !important;
     }
     
-    #queue_stats, [class*="rtop"], [class*="rbottom"], #msg_body_preview, #pmsubject, #pmsubject .subject {
-        background: var(--background) !important;
+    #queue_stats {
+        background: none;
     }
     
-    .queue_item, #pmbody, [class*="rtop"] *, [class*="rbottom"] * {
-        background: var(--foreground) !important;
+    .queue_item {
+        background: var(--foreground);
+    }
+    
+    .queue_header {
+        color: var(--text);
+        border-bottom: none;
+    }
+    
+    .queue_footer {
+        color: var(--text);
+        border-top: none;
+    }
+    
+    a.queue_btn {
+        background-color: var(--button);
+        border-radius: 0;
+        border: 1px solid var(--border);
+        color: var(--button-text);
+    }
+    
+    a.queue_random {
+        background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 384 384' style='enable-background:new 0 0 384 384;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23edeeed' d='M341.333,0H42.667C19.093,0,0,19.093,0,42.667v298.667C0,364.907,19.093,384,42.667,384h298.667 C364.907,384,384,364.907,384,341.333V42.667C384,19.093,364.907,0,341.333,0z M96,320c-17.707,0-32-14.293-32-32s14.293-32,32-32 s32,14.293,32,32S113.707,320,96,320z M96,128c-17.707,0-32-14.293-32-32s14.293-32,32-32s32,14.293,32,32S113.707,128,96,128z M192,224c-17.707,0-32-14.293-32-32s14.293-32,32-32s32,14.293,32,32S209.707,224,192,224z M288,320c-17.707,0-32-14.293-32-32 s14.293-32,32-32s32,14.293,32,32S305.707,320,288,320z M288,128c-17.707,0-32-14.293-32-32s14.293-32,32-32s32,14.293,32,32 S305.707,128,288,128z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
+        background-size: 60%;
+    }
+    
+    a.queue_btn:hover {
+        background-color: var(--button-hover);
+    }
+    
+    [class*="rtop"], [class*="rbottom"], #msg_body_preview, #pmsubject, #pmsubject .subject {
+        background: none !important;
+    }
+    
+    #pmbody, [class*="rtop"] *, [class*="rbottom"] * {
+        background: var(--foregrond) !important;
+    }
+    
+    div[style='border:1px #888 solid; padding:20px; color:#333; background:#fffff8; width:70%'] {
+        border: 1px solid var(--yellow) !important;
+        background: var(--yellow-background) !important;
+        color: var(--yellow) !important;
+    }
+    
+    div[style='border:1px #888 solid; padding:20px; color:#333; background:#fffff8; width:70%'] h3 {
+        color: var(--yellow) !important;
     }
     
     .quote {
-        background: var(--background);
+        background: none;
+        border: 1px solid var(--border);
         color: var(--text);
+    }
+    
+    .mbgen .zerotable tr {
+        border: none;
+    }
+    
+    .mbtime {
+        color: var(--text-gray);
+    }
+    
+    .zerotable td[style='border:none;text-align:right;font-size:x-small;color:darkgray;'] {
+        color: var(--text-gray) !important;
+    }
+    
+    blockquote span[style='font-size:9px;font-weight:bold;color:#999999;'] {
+        color: var(--text-gray) !important;
     }
 }
