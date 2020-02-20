@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           darkRYM
 @namespace      github.com/jgchk/RateYourMusic-Dark
-@version        1.2.8
+@version        1.2.9
 @description    dark theme for rateyourmusic.com based on RateYourMusic Tomorrow 2
 @author         mocha
 ==/UserStyle== */
@@ -2151,5 +2151,15 @@
     
     blockquote span[style='font-size:9px;font-weight:bold;color:#999999;'] {
         color: var(--text-gray) !important;
+    }
+    
+    div[style='background-color: #eee; padding: 5px;'] {
+        background: none !important;
+    }
+    
+    #genre_rec_shell {
+        background: var(--foreground) !important;
+        border: 1px solid var(--border) !important;
+        color: var(--text) !important;
     }
 }
