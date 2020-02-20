@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           darkRYM
 @namespace      github.com/jgchk/RateYourMusic-Dark
-@version        1.2.7
+@version        1.2.8
 @description    dark theme for rateyourmusic.com based on RateYourMusic Tomorrow 2
 @author         mocha
 ==/UserStyle== */
@@ -2072,6 +2072,23 @@
     
     #wiki_content h2,
     #wiki_content h3 {
+        color: var(--text);
+    }
+    
+    .mbgen tr:last-child {
+        background: var(--background) !important;
+    }
+    
+    #queue_stats, [class*="rtop"], [class*="rbottom"], #msg_body_preview, #pmsubject, #pmsubject .subject {
+        background: var(--background) !important;
+    }
+    
+    .queue_item, #pmbody, [class*="rtop"] *, [class*="rbottom"] * {
+        background: var(--foreground) !important;
+    }
+    
+    .quote {
+        background: var(--background);
         color: var(--text);
     }
 }
