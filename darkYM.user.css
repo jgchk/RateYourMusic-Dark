@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           darkRYM
 @namespace      github.com/jgchk/RateYourMusic-Dark
-@version        1.2.10
+@version        1.2.11
 @description    dark theme for rateyourmusic.com based on RateYourMusic Tomorrow 2
 @author         mocha
 ==/UserStyle== */
@@ -195,6 +195,10 @@
     #mainsearch_submit {
         color: var(--text) !important;
         background: var(--border) !important;
+    }
+    
+    div.helplink {
+        margin-top: 1px;
     }
     
     div.helplink a {
@@ -2197,5 +2201,23 @@
     .settings-panel.brym .setting.list .setting.list-item.disabled {
         color: var(--border);
         background-color: var(--background);
+    }
+    
+    .or_q_review {
+        color: var(--text);
+        border-left: 30px solid var(--border);
+    }
+    
+    .track_rating_header > div[style='float:left;'] {
+        color: var(--dark-text) !important;
+    }
+    
+    .track_rating_header {
+        border-bottom: none;
+    }
+    
+    .track_rating_header:hover {
+        color: var(--text) !important;
+        background-color: var(--border);
     }
 }
