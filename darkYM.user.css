@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           darkRYM
 @namespace      github.com/jgchk/RateYourMusic-Dark
-@version        1.2.11
+@version        1.2.12
 @description    dark theme for rateyourmusic.com based on RateYourMusic Tomorrow 2
 @author         mocha
 ==/UserStyle== */
@@ -1318,11 +1318,15 @@
     #breadcrumb li.lnk {
         color: var(--button-text);
         border: 1px solid var(--border);
-        background: var(--button);
+        background: var(--button) !important;
+    }
+    
+    #breadcrumb li.lnk a {
+        color: var(--button-text);
     }
     
     #breadcrumb li.lnk:hover {
-        background: var(--button-hover);
+        background: var(--button-hover) !important;
     }
     
     .navlinkcurrent {
@@ -1812,7 +1816,8 @@
         color: var(--red);
     }
     
-    .warning {
+    .warning,
+    .pmwarning {
         background-color: var(--yellow-background);
         border: 1px solid var(--yellow);
         color: var(--yellow);
@@ -2127,8 +2132,50 @@
         background: none !important;
     }
     
+    #pminfo, #pminfo .rbottom *, #pminfo .rtop * {
+        background: var(--foreground);
+    }
+    
+    #pminfo,
+    #pmbody {
+        border: 1px solid var(--border);
+    }
+    
     #pmbody, [class*="rtop"] *, [class*="rbottom"] * {
-        background: var(--foregrond) !important;
+        background: var(--foreground) !important;
+    }
+    
+    #conversation_history,
+    #conversation_history tr {
+        background: var(--foreground);
+        border: 1px solid var(--border);
+    }
+    
+    td[style='background:#fff;text-align:center;'] {
+        background: var(--foreground) !important;
+    }
+        
+    .ch_selected {
+        background: var(--border);
+    }
+    
+    .ch_body {
+        color: var(--text);
+    }
+    
+    .ch_date {
+        color: var(--text-gray);
+    }
+    
+    #pminfo a.btn {
+        color: var(--button-text);
+        background: var(--button);
+        border-radius: 0;
+        border: 1px solid var(--border);
+    }
+    
+    #pminfo a.btn:hover {
+        background: var(--button-hover);
     }
     
     div[style='border:1px #888 solid; padding:20px; color:#333; background:#fffff8; width:70%'] {
